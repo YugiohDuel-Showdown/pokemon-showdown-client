@@ -822,7 +822,9 @@ export const Dex = new class implements ModdedDex {
 		let left = (num % 12) * 40;
 		let fainted = ((pokemon as Pokemon | ServerPokemon)?.fainted ?
 			`;opacity:.3;filter:grayscale(100%) brightness(.5)` : ``);
-		return `background:transparent url(${Dex.resourcePrefix}sprites/pokemonicons-sheet.png?v18) no-repeat scroll -${left}px -${top}px${fainted}`;
+
+		let url = `https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/front/${id}.png`;
+		return `background:transparent url(${url}) no-repeat scroll;background-size:contain;width:40px;background-position:center${fainted}`;
 	}
 
 	getTeambuilderSpriteData(pokemon: any, gen = 0): TeambuilderSpriteData {
@@ -885,14 +887,18 @@ export const Dex = new class implements ModdedDex {
 		if (!pokemon) return '';
 		const data = this.getTeambuilderSpriteData(pokemon, gen);
 		const shiny = (data.shiny ? '-shiny' : '');
-		return `background-image:url(${Dex.resourcePrefix}${data.spriteDir}${shiny}/${data.spriteid}.png);background-position:${data.x}px ${data.y}px;background-repeat:no-repeat`;
+		let url = `https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/front${shiny ? '-shiny' : ''}/${toID(pokemon.species)}.png`;
+		return `background-image:url(${url});background-position:${data.x}px ${data.y}px;background-repeat:no-repeat`;
 	}
 
 	getItemIcon(item: any) {
 		let num = 0;
 		if (typeof item === 'string' && exports.BattleItems) item = exports.BattleItems[toID(item)];
 		if (item?.spritenum) num = item.spritenum;
-
+		if (num === -100) {
+			let url = `https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/items/${toID(item.name)}.png`;
+			return `background:transparent url(${url}) no-repeat`;
+		}
 		let top = Math.floor(num / 16) * 24;
 		let left = (num % 16) * 24;
 		return `background:transparent url(${Dex.resourcePrefix}sprites/itemicons-sheet.png?v1) no-repeat scroll -${left}px -${top}px`;
