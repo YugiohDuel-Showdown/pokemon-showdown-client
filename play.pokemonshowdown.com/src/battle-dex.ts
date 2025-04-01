@@ -608,6 +608,13 @@ export const Dex = new class implements ModdedDex {
 			facing = 'back';
 		}
 
+		if (isFront) spriteData.url = `https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/front${options.shiny ? '-shiny' : ''}/${species.id}.png`;
+		else if (!isFront && species.tags.includes("Has Back Sprite")) spriteData.url = `https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/back${options.shiny ? '-shiny' : ''}/${species.id}.png`;
+		else spriteData.url = `https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/front${options.shiny ? '-shiny' : ''}/${species.id}.png`;
+		spriteData.pixelated = true;
+		spriteData.gen = 5;
+		return spriteData;
+
 		// Decide which gen sprites to use.
 		//
 		// There are several different generations we care about here:
@@ -619,143 +626,145 @@ export const Dex = new class implements ModdedDex {
 		//     This defaults to graphicsGen, but if the graphicsGen doesn't have a sprite for the Pokemon
 		//     (eg. Darmanitan in graphicsGen 2) then we go up gens until it exists.
 		//
-		let graphicsGen = mechanicsGen;
-		if (Dex.prefs('nopastgens')) graphicsGen = 6;
-		if (Dex.prefs('bwgfx') && graphicsGen >= 6) graphicsGen = 5;
-		spriteData.gen = Math.max(graphicsGen, Math.min(species.gen, 5));
-		const baseDir = ['', 'gen1', 'gen2', 'gen3', 'gen4', 'gen5', '', '', '', ''][spriteData.gen];
 
-		let animationData = null;
-		let miscData = null;
-		let speciesid = species.id;
-		if (species.isTotem) speciesid = toID(name);
-		if (baseDir === '' && window.BattlePokemonSprites) {
-			animationData = BattlePokemonSprites[speciesid];
-		}
-		if (baseDir === 'gen5' && window.BattlePokemonSpritesBW) {
-			animationData = BattlePokemonSpritesBW[speciesid];
-		}
-		if (window.BattlePokemonSprites) miscData = BattlePokemonSprites[speciesid];
-		if (!miscData && window.BattlePokemonSpritesBW) miscData = BattlePokemonSpritesBW[speciesid];
-		if (!animationData) animationData = {};
-		if (!miscData) miscData = {};
 
-		if (miscData.num !== 0 && miscData.num > -5000) {
-			let baseSpeciesid = toID(species.baseSpecies);
-			spriteData.cryurl = 'audio/cries/' + baseSpeciesid;
-			let formeid = species.formeid;
-			if (species.isMega || formeid && (
-				formeid === '-crowned' ||
-				formeid === '-eternal' ||
-				formeid === '-eternamax' ||
-				formeid === '-four' ||
-				formeid === '-hangry' ||
-				formeid === '-hero' ||
-				formeid === '-lowkey' ||
-				formeid === '-noice' ||
-				formeid === '-primal' ||
-				formeid === '-rapidstrike' ||
-				formeid === '-roaming' ||
-				formeid === '-school' ||
-				formeid === '-sky' ||
-				formeid === '-starter' ||
-				formeid === '-super' ||
-				formeid === '-therian' ||
-				formeid === '-unbound' ||
-				baseSpeciesid === 'calyrex' ||
-				baseSpeciesid === 'kyurem' ||
-				baseSpeciesid === 'cramorant' ||
-				baseSpeciesid === 'indeedee' ||
-				baseSpeciesid === 'lycanroc' ||
-				baseSpeciesid === 'necrozma' ||
-				baseSpeciesid === 'oinkologne' ||
-				baseSpeciesid === 'oricorio' ||
-				baseSpeciesid === 'slowpoke' ||
-				baseSpeciesid === 'tatsugiri' ||
-				baseSpeciesid === 'zygarde'
-			)) {
-				spriteData.cryurl += formeid;
-			}
-			spriteData.cryurl += '.mp3';
-		}
+		// let graphicsGen = mechanicsGen;
+		// if (Dex.prefs('nopastgens')) graphicsGen = 6;
+		// if (Dex.prefs('bwgfx') && graphicsGen >= 6) graphicsGen = 5;
+		// spriteData.gen = Math.max(graphicsGen, Math.min(species.gen, 5));
+		// const baseDir = ['', 'gen1', 'gen2', 'gen3', 'gen4', 'gen5', '', '', '', ''][spriteData.gen];
 
-		if (options.shiny && mechanicsGen > 1) dir += '-shiny';
+		// let animationData = null;
+		// let miscData = null;
+		// let speciesid = species.id;
+		// if (species.isTotem) speciesid = toID(name);
+		// if (baseDir === '' && window.BattlePokemonSprites) {
+		// 	animationData = BattlePokemonSprites[speciesid];
+		// }
+		// if (baseDir === 'gen5' && window.BattlePokemonSpritesBW) {
+		// 	animationData = BattlePokemonSpritesBW[speciesid];
+		// }
+		// if (window.BattlePokemonSprites) miscData = BattlePokemonSprites[speciesid];
+		// if (!miscData && window.BattlePokemonSpritesBW) miscData = BattlePokemonSpritesBW[speciesid];
+		// if (!animationData) animationData = {};
+		// if (!miscData) miscData = {};
 
-		// April Fool's 2014
-		if (Dex.prefs('afd') !== false && (window.Config?.server?.afd || Dex.prefs('afd') || options.afd)) {
-			// Explicit false check above means AFD will be off if the user disables it - no matter what
-			dir = 'afd' + dir;
-			spriteData.url += dir + '/' + name + '.png';
-			// Duplicate code but needed to make AFD tinymax work
-			// April Fool's 2020
-			if (isDynamax && !options.noScale) {
-				spriteData.w *= 0.25;
-				spriteData.h *= 0.25;
-				spriteData.y += -22;
-			} else if (species.isTotem && !options.noScale) {
-				spriteData.w *= 0.5;
-				spriteData.h *= 0.5;
-				spriteData.y += -11;
-			}
-			return spriteData;
-		}
+		// if (miscData.num !== 0 && miscData.num > -5000) {
+		// 	let baseSpeciesid = toID(species.baseSpecies);
+		// 	spriteData.cryurl = 'audio/cries/' + baseSpeciesid;
+		// 	let formeid = species.formeid;
+		// 	if (species.isMega || formeid && (
+		// 		formeid === '-crowned' ||
+		// 		formeid === '-eternal' ||
+		// 		formeid === '-eternamax' ||
+		// 		formeid === '-four' ||
+		// 		formeid === '-hangry' ||
+		// 		formeid === '-hero' ||
+		// 		formeid === '-lowkey' ||
+		// 		formeid === '-noice' ||
+		// 		formeid === '-primal' ||
+		// 		formeid === '-rapidstrike' ||
+		// 		formeid === '-roaming' ||
+		// 		formeid === '-school' ||
+		// 		formeid === '-sky' ||
+		// 		formeid === '-starter' ||
+		// 		formeid === '-super' ||
+		// 		formeid === '-therian' ||
+		// 		formeid === '-unbound' ||
+		// 		baseSpeciesid === 'calyrex' ||
+		// 		baseSpeciesid === 'kyurem' ||
+		// 		baseSpeciesid === 'cramorant' ||
+		// 		baseSpeciesid === 'indeedee' ||
+		// 		baseSpeciesid === 'lycanroc' ||
+		// 		baseSpeciesid === 'necrozma' ||
+		// 		baseSpeciesid === 'oinkologne' ||
+		// 		baseSpeciesid === 'oricorio' ||
+		// 		baseSpeciesid === 'slowpoke' ||
+		// 		baseSpeciesid === 'tatsugiri' ||
+		// 		baseSpeciesid === 'zygarde'
+		// 	)) {
+		// 		spriteData.cryurl += formeid;
+		// 	}
+		// 	spriteData.cryurl += '.mp3';
+		// }
 
-		// Mod Cries
-		if (options.mod) {
-			spriteData.cryurl = `sprites/${options.mod}/audio/${toID(species.baseSpecies)}`;
-			spriteData.cryurl += '.mp3';
-		}
+		// if (options.shiny && mechanicsGen > 1) dir += '-shiny';
 
-		if (animationData[facing + 'f'] && options.gender === 'F') facing += 'f';
-		let allowAnim = !Dex.prefs('noanim') && !Dex.prefs('nogif');
-		if (allowAnim && spriteData.gen >= 6) spriteData.pixelated = false;
-		if (allowAnim && animationData[facing] && spriteData.gen >= 5) {
-			if (facing.endsWith('f')) name += '-f';
-			dir = baseDir + 'ani' + dir;
+		// // April Fool's 2014
+		// if (Dex.prefs('afd') !== false && (window.Config?.server?.afd || Dex.prefs('afd') || options.afd)) {
+		// 	// Explicit false check above means AFD will be off if the user disables it - no matter what
+		// 	dir = 'afd' + dir;
+		// 	spriteData.url += dir + '/' + name + '.png';
+		// 	// Duplicate code but needed to make AFD tinymax work
+		// 	// April Fool's 2020
+		// 	if (isDynamax && !options.noScale) {
+		// 		spriteData.w *= 0.25;
+		// 		spriteData.h *= 0.25;
+		// 		spriteData.y += -22;
+		// 	} else if (species.isTotem && !options.noScale) {
+		// 		spriteData.w *= 0.5;
+		// 		spriteData.h *= 0.5;
+		// 		spriteData.y += -11;
+		// 	}
+		// 	return spriteData;
+		// }
 
-			spriteData.w = animationData[facing].w;
-			spriteData.h = animationData[facing].h;
-			spriteData.url += dir + '/' + name + '.gif';
-		} else {
-			// There is no entry or enough data in pokedex-mini.js
-			// Handle these in case-by-case basis; either using BW sprites or matching the played gen.
-			dir = (baseDir || 'gen5') + dir;
+		// // Mod Cries
+		// if (options.mod) {
+		// 	spriteData.cryurl = `sprites/${options.mod}/audio/${toID(species.baseSpecies)}`;
+		// 	spriteData.cryurl += '.mp3';
+		// }
 
-			// Gender differences don't exist prior to Gen 4,
-			// so there are no sprites for it
-			if (spriteData.gen >= 4 && miscData['frontf'] && options.gender === 'F') {
-				name += '-f';
-			}
+		// if (animationData[facing + 'f'] && options.gender === 'F') facing += 'f';
+		// let allowAnim = !Dex.prefs('noanim') && !Dex.prefs('nogif');
+		// if (allowAnim && spriteData.gen >= 6) spriteData.pixelated = false;
+		// if (allowAnim && animationData[facing] && spriteData.gen >= 5) {
+		// 	if (facing.endsWith('f')) name += '-f';
+		// 	dir = baseDir + 'ani' + dir;
 
-			spriteData.url += dir + '/' + name + '.png';
-		}
+		// 	spriteData.w = animationData[facing].w;
+		// 	spriteData.h = animationData[facing].h;
+		// 	spriteData.url += dir + '/' + name + '.gif';
+		// } else {
+		// 	// There is no entry or enough data in pokedex-mini.js
+		// 	// Handle these in case-by-case basis; either using BW sprites or matching the played gen.
+		// 	dir = (baseDir || 'gen5') + dir;
 
-		if (!options.noScale) {
-			if (graphicsGen > 4) {
-				// no scaling
-			} else if (spriteData.isFrontSprite) {
-				spriteData.w *= 2;
-				spriteData.h *= 2;
-				spriteData.y += -16;
-			} else {
-				// old gen backsprites are multiplied by 1.5x by the 3D engine
-				spriteData.w *= 2 / 1.5;
-				spriteData.h *= 2 / 1.5;
-				spriteData.y += -11;
-			}
-			if (spriteData.gen <= 2) spriteData.y += 2;
-		}
-		if (isDynamax && !options.noScale) {
-			spriteData.w *= 2;
-			spriteData.h *= 2;
-			spriteData.y += -22;
-		} else if (species.isTotem && !options.noScale) {
-			spriteData.w *= 1.5;
-			spriteData.h *= 1.5;
-			spriteData.y += -11;
-		}
+		// 	// Gender differences don't exist prior to Gen 4,
+		// 	// so there are no sprites for it
+		// 	if (spriteData.gen >= 4 && miscData['frontf'] && options.gender === 'F') {
+		// 		name += '-f';
+		// 	}
 
-		return spriteData;
+		// 	spriteData.url += dir + '/' + name + '.png';
+		// }
+
+		// if (!options.noScale) {
+		// 	if (graphicsGen > 4) {
+		// 		// no scaling
+		// 	} else if (spriteData.isFrontSprite) {
+		// 		spriteData.w *= 2;
+		// 		spriteData.h *= 2;
+		// 		spriteData.y += -16;
+		// 	} else {
+		// 		// old gen backsprites are multiplied by 1.5x by the 3D engine
+		// 		spriteData.w *= 2 / 1.5;
+		// 		spriteData.h *= 2 / 1.5;
+		// 		spriteData.y += -11;
+		// 	}
+		// 	if (spriteData.gen <= 2) spriteData.y += 2;
+		// }
+		// if (isDynamax && !options.noScale) {
+		// 	spriteData.w *= 2;
+		// 	spriteData.h *= 2;
+		// 	spriteData.y += -22;
+		// } else if (species.isTotem && !options.noScale) {
+		// 	spriteData.w *= 1.5;
+		// 	spriteData.h *= 1.5;
+		// 	spriteData.y += -11;
+		// }
+
+		// return spriteData;
 	}
 
 	getPokemonIconNum(id: ID, isFemale?: boolean, facingLeft?: boolean) {
