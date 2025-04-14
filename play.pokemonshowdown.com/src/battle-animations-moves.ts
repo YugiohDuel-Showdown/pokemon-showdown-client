@@ -37063,7 +37063,7 @@ BattleMoveAnims['mechanizedmelee'] = { anim: BattleOtherAnims.punchattack.anim }
 BattleMoveAnims['celestialsword'] = { anim: BattleOtherAnims.slashattack.anim };
 BattleMoveAnims['sparkblaster'] = { anim: BattleMoveAnims['zapcannon'].anim };
 BattleMoveAnims['mysticalspacetyphoon'] = { anim: (scene, [attacker, defender]) => {
-	scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-space.png')`, 800, 0.6);
+	scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-space.png')`, 1300, 0.5);
 	
 	// Hurricane
 	for (let i = 0; i < 4; i++) {
