@@ -736,7 +736,7 @@ export const BattleMoveAnims: AnimTable = {
 	afteryou: {
 		anim: BattleOtherAnims.dance.anim,
 	},
-	allyswitch: {
+	exchange: {
 		anim() {
 			// do not give Ally Switch an animation,
 			// it'll conflict with the animation of the switch itself
@@ -37204,7 +37204,7 @@ BattleMoveAnims['zombieworld'] = {
 BattleMoveAnims['wrathofneos'] = { anim: BattleMoveAnims['judgement'].anim };
 BattleMoveAnims['bookofmoon'] = { anim: BattleMoveAnims['moonlight'].anim };
 BattleMoveAnims['diamondbladestrike'] = { anim: BattleOtherAnims.slashattack.anim };
-BattleMoveAnims['1000knives'] = { anim: BattleOtherAnims.slashattack.anim }; // Unsure what to do for this one.
+BattleMoveAnims['1000knives'] = { anim: BattleMoveAnims['swift'].anim }; // Unsure what to do for this one.
 BattleMoveAnims['hammershot'] = { anim: BattleMoveAnims['gigahammer'].anim };
 BattleMoveAnims['claycharge'] = { anim: BattleMoveAnims['rockslide'].anim };
 BattleMoveAnims['ookazi'] = { anim: BattleMoveAnims['heatwave'].anim };
