@@ -37022,3 +37022,36 @@ BattleMoveAnims['trailblaze'] = { anim: BattleMoveAnims['powerwhip'].anim };
 BattleMoveAnims['tripledive'] = { anim: BattleMoveAnims['dive'].anim };
 BattleMoveAnims['hydrosteam'] = { anim: BattleMoveAnims['steameruption'].anim };
 BattleMoveAnims['psyblade'] = { anim: BattleMoveAnims['psychocut'].anim };
+
+
+// Custom Moves from Yugioh Pokeduel
+BattleMoveAnims['darkmagicattack'] = { anim: BattleMoveAnims['darkpulse'].anim };
+BattleMoveAnims['whitelightning'] = { anim: BattleMoveAnims['thunder'].anim };
+// BattleMoveAnims['skyscraper'] = {}; // Not sure what this should look like.
+BattleMoveAnims['obliterate'] = { anim: BattleMoveAnims['explosion'].anim };
+BattleMoveAnims['darkburningattack'] = { anim: BattleMoveAnims['burningjealously'].anim };
+BattleMoveAnims['burststream'] = { anim: BattleMoveAnims['dragonpulse'].anim };
+BattleMoveAnims['dragonsword'] = { anim: BattleOtherAnims.slashattack.anim }; // This might change.
+BattleMoveAnims['skyscorcher'] = { anim: BattleMoveAnims['fusionflare'].anim }; // Going off of Light That Burns the Sky.
+BattleMoveAnims['flamesword'] = { anim: BattleOtherAnims.slashattack.anim }; // This can be change.
+BattleMoveAnims['spiralspear'] = { anim: BattleMoveAnims['iciclespear'].anim }; // Will most likely be changed.
+BattleMoveAnims['thundersword'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['infernoblast'] = { anim: BattleMoveAnims['fireblast'].anim };
+BattleMoveAnims['axeslam'] = { anim: BattleMoveAnims['stoneaxe'].anim };
+BattleMoveAnims['metalthrust'] = { anim: BattleMoveAnims['flashcannon'].anim };
+BattleMoveAnims['cyberslash'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['tripleslice'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['cybershock'] = { anim: BattleMoveAnims['spark'].anim };
+BattleMoveAnims['celticblade'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['darklight'] = { anim: BattleMoveAnims['darkpulse'].anim }; // Will probably be changed.
+BattleMoveAnims['vengeance'] = { anim: BattleMoveAnims['thrash'].anim };
+BattleMoveAnims['magnetsword'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['fistoffate'] = { anim: BattleOtherAnims.punchattack.anim };
+BattleMoveAnims['thunderforce'] = { anim: BattleMoveAnims['thunder'].anim };
+// BattleMoveAnims['phoenixform'] = {};
+BattleMoveAnims['defensemode'] = { anim: BattleMoveAnims['kingsshield'].anim };
+BattleMoveAnims['bombardment'] = { anim: BattleMoveAnims['syrupbomb'].anim };
+BattleMoveAnims['destinyboard'] = { prepareAnim: BattleOtherAnims.chargestatus.anim, anim: BattleMoveAnims['darkpulse'].anim }; // might change anim to something else.
+BattleMoveAnims['bubbleblast'] = { anim: BattleMoveAnims['bubblebeam'].anim };
+BattleMoveAnims['scrapfist'] = { anim: BattleOtherAnims.punchattack.anim };
+BattleMoveAnims['toxicbreath'] = { anim: BattleMoveAnims['toxicbreath'].anim };
