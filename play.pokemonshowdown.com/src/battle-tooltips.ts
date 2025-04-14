@@ -667,10 +667,20 @@ export class BattleTooltips {
 					calls = 'Thunderbolt';
 				} else if (this.battle.hasPseudoWeather('Grassy Terrain')) {
 					calls = 'Energy Ball';
+				} else if (this.battle.hasPseudoWeather('Forest Terrain')) {
+					calls = 'Energy Ball';
 				} else if (this.battle.hasPseudoWeather('Misty Terrain')) {
 					calls = 'Moonblast';
 				} else if (this.battle.hasPseudoWeather('Psychic Terrain')) {
 					calls = 'Psychic';
+				} else if (this.battle.hasPseudoWeather('Mountain')) {
+					calls = 'Dragon Pulse';
+				} else if (this.battle.hasPseudoWeather('Wasteland')) {
+					calls = 'Earthquake';
+				} else if (this.battle.hasPseudoWeather('Yami')) {
+					calls = 'Dark Pulse';
+				} else if (this.battle.hasPseudoWeather('Harpies Hunting Ground')) {
+					calls = 'Hurricane';
 				} else {
 					calls = 'Tri Attack';
 				}
@@ -1199,6 +1209,10 @@ export class BattleTooltips {
 		if (ability === 'grasspelt' && this.battle.hasPseudoWeather('Grassy Terrain')) {
 			stats.def = Math.floor(stats.def * 1.5);
 		}
+		if ((ability === 'swarm' || ability === 'overgrow') && this.battle.hasPseudoWeather('Forest Terrain')) {
+			stats.def = Math.floor(stats.def * 1.3);
+			stats.spd = Math.floor(stats.spd * 1.3);
+		}
 		if (this.battle.hasPseudoWeather('Electric Terrain')) {
 			if (ability === 'surgesurfer') {
 				speedModifiers.push(2);
@@ -1581,10 +1595,20 @@ export class BattleTooltips {
 				moveType = 'Electric';
 			} else if (this.battle.hasPseudoWeather('Grassy Terrain')) {
 				moveType = 'Grass';
+			} else if (this.battle.hasPseudoWeather('Forest Terrain')) {
+				moveType = 'Grass';
 			} else if (this.battle.hasPseudoWeather('Misty Terrain')) {
 				moveType = 'Fairy';
 			} else if (this.battle.hasPseudoWeather('Psychic Terrain')) {
 				moveType = 'Psychic';
+			} else if (this.battle.hasPseudoWeather('Mountain')) {
+				moveType = 'Dragon';
+			} else if (this.battle.hasPseudoWeather('Wasteland')) {
+				moveType = 'Ground';
+			} else if (this.battle.hasPseudoWeather('Yami')) {
+				moveType = 'Dark';
+			} else if (this.battle.hasPseudoWeather('Harpies Hunting Ground')) {
+				moveType = 'Flying';
 			}
 		}
 		if (move.id === 'terablast' && pokemon.terastallized) {
@@ -1736,6 +1760,9 @@ export class BattleTooltips {
 		if (['hurricane', 'thunder', 'bleakwindstorm', 'wildboltstorm', 'sandsearstorm'].includes(move.id)) {
 			value.weatherModify(0, 'Rain Dance');
 			value.weatherModify(0, 'Primordial Sea');
+		}
+		if (move.type === 'Electric' && this.battle.hasPseudoWeather('Mountain')) {
+			value.weatherModify(0, 'Mountain');
 		}
 		value.abilityModify(0, 'No Guard');
 		if (!value.value) return value;
@@ -1982,8 +2009,12 @@ export class BattleTooltips {
 			if (
 				this.battle.hasPseudoWeather('Electric Terrain') ||
 				this.battle.hasPseudoWeather('Grassy Terrain') ||
+				this.battle.hasPseudoWeather('Forest Terrain') ||
 				this.battle.hasPseudoWeather('Misty Terrain') ||
-				this.battle.hasPseudoWeather('Psychic Terrain')
+				this.battle.hasPseudoWeather('Psychic Terrain') ||
+				this.battle.hasPseudoWeather('Mountain') ||
+				this.battle.hasPseudoWeather('Wasteland') ||
+				this.battle.hasPseudoWeather('Yami')
 			) {
 				value.modify(2, 'Terrain Pulse boost');
 			}
@@ -2182,13 +2213,26 @@ export class BattleTooltips {
 		// Terrain
 		if ((this.battle.hasPseudoWeather('Electric Terrain') && moveType === 'Electric') ||
 			(this.battle.hasPseudoWeather('Grassy Terrain') && moveType === 'Grass') ||
-			(this.battle.hasPseudoWeather('Psychic Terrain') && moveType === 'Psychic')) {
+			(this.battle.hasPseudoWeather('Forest Terrain') && ['Grass', 'Bug'].includes(moveType)) ||
+			(this.battle.hasPseudoWeather('Psychic Terrain') && moveType === 'Psychic') ||
+			(this.battle.hasPseudoWeather('Mountain') && ['Dragon', 'Flying'].includes(moveType)) ||
+			(this.battle.hasPseudoWeather('Wasteland') && ['Ground', 'Rock', 'Ghost'].includes(moveType)) ||
+			(this.battle.hasPseudoWeather('Yami') && moveType === 'Dark') ||
+			(this.battle.hasPseudoWeather('Harpies Hunting Ground') && moveType === 'Flying')) {
 			if (pokemon.isGrounded(serverPokemon)) {
 				value.modify(this.battle.gen > 7 ? 1.3 : 1.5, 'Terrain boost');
 			}
 		} else if (this.battle.hasPseudoWeather('Misty Terrain') && moveType === 'Dragon') {
 			if (target ? target.isGrounded() : true) {
 				value.modify(0.5, 'Misty Terrain + grounded target');
+			}
+		} else if (this.battle.hasPseudoWeather('Wasteland') && moveType === 'Grass') {
+			if (target ? target.isGrounded() : true) {
+				value.modify(0.5, 'Wasteland + grounded target');
+			}
+		} else if (this.battle.hasPseudoWeather('Yami') && moveType === 'Fairy') {
+			if (target ? target.isGrounded() : true) {
+				value.modify(0.5, 'Yami + grounded target');
 			}
 		} else if (
 			this.battle.hasPseudoWeather('Grassy Terrain') && ['earthquake', 'bulldoze', 'magnitude'].includes(move.id)
@@ -2233,8 +2277,13 @@ export class BattleTooltips {
 			move.id === 'steelroller' &&
 			!this.battle.hasPseudoWeather('Electric Terrain') &&
 			!this.battle.hasPseudoWeather('Grassy Terrain') &&
+			!this.battle.hasPseudoWeather('Forest Terrain') &&
 			!this.battle.hasPseudoWeather('Misty Terrain') &&
-			!this.battle.hasPseudoWeather('Psychic Terrain')
+			!this.battle.hasPseudoWeather('Psychic Terrain') &&
+			!this.battle.hasPseudoWeather('Mountain') &&
+			!this.battle.hasPseudoWeather('Wasteland') &&
+			!this.battle.hasPseudoWeather('Yami') &&
+			!this.battle.hasPseudoWeather('Harpies Hunting Ground')
 		) {
 			value.set(0, 'no Terrain');
 		}

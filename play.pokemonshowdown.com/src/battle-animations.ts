@@ -1144,6 +1144,26 @@ export class BattleScene implements BattleSceneStub {
 				time: instant ? 0 : 300,
 			});
 			break;
+		case 'froggyforcefield':
+			const froggyforcefield = new Sprite(BattleEffects.froggyforcefield, {
+				display: 'block',
+				x,
+				y,
+				z: side.behind(-14),
+				xscale: 1,
+				yscale: 0,
+				opacity: 0.1
+			}, this);
+			this.$spritesFront[spriteIndex].append(froggyforcefield.$el);
+			this.sideConditions[siden][id] = [froggyforcefield];
+			froggyforcefield.anim({
+				opacity: 0.7,
+				time: instant ? 0 : 400,
+			}).anim({
+				opacity: 0.3,
+				time: instant ? 0 : 300,
+			});
+			break;
 		case 'reflect':
 			const reflect = new Sprite(BattleEffects.reflect, {
 				display: 'block',
@@ -1903,6 +1923,9 @@ export class PokemonSprite extends Sprite {
 		// Gen 1
 		lightscreen: ['Light Screen', 'good'],
 		reflect: ['Reflect', 'good'],
+		// Custom Yugioh
+		froggyforcefield: ['Froggy Forcefield', 'good'],
+		badsimochi: ['Bad Simochi', 'good'],
 	};
 	forme = '';
 	cryurl: string | undefined = undefined;
@@ -3164,6 +3187,10 @@ const BattleEffects: { [k: string]: SpriteData } = {
 	},
 	auroraveil: {
 		rawHTML: '<div class="sidecondition-auroraveil" style="display:none;position:absolute" />',
+		w: 100, h: 50,
+	},
+	froggyforcefield: {
+		rawHTML: '<div class="sidecondition-froggyforcefield" style="display:none;position:absolute" />',
 		w: 100, h: 50,
 	},
 	reflect: {
