@@ -37271,4 +37271,5 @@ BattleMoveAnims['fluteofdragon'] = {
 BattleMoveAnims['carddestroy'] = { anim: BattleOtherAnims.sound.anim };
 BattleMoveAnims['manarestoring'] = { anim: BattleOtherAnims.sound.anim };
 BattleMoveAnims['acidrain'] = { anim: BattleMoveAnims['smog'].anim };
+BattleMoveAnims['heytrunade'] = { anim: BattleMoveAnims['hurricane'].anim };
 // Castle Walls doesn't need any animations.
