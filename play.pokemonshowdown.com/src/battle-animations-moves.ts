@@ -37054,7 +37054,7 @@ BattleMoveAnims['bombardment'] = { anim: BattleMoveAnims['syrupbomb'].anim };
 BattleMoveAnims['destinyboard'] = { prepareAnim: BattleOtherAnims.chargestatus.anim, anim: BattleMoveAnims['darkpulse'].anim }; // might change anim to something else.
 BattleMoveAnims['bubbleblast'] = { anim: BattleMoveAnims['bubblebeam'].anim };
 BattleMoveAnims['scrapfist'] = { anim: BattleOtherAnims.punchattack.anim };
-BattleMoveAnims['toxicbreath'] = { anim: BattleMoveAnims['toxicbreath'].anim };
+BattleMoveAnims['toxicbreath'] = { anim: BattleMoveAnims['smog'].anim };
 BattleMoveAnims['silentburn'] = { anim: BattleMoveAnims['blastburn'].anim };
 BattleMoveAnims['neutronblast'] = { anim: BattleMoveAnims['photongeyser'].anim };
 BattleMoveAnims['negate'] = { anim: BattleMoveAnims['block'].anim };
@@ -37270,4 +37270,5 @@ BattleMoveAnims['fluteofdragon'] = {
 };
 BattleMoveAnims['carddestroy'] = { anim: BattleOtherAnims.sound.anim };
 BattleMoveAnims['manarestoring'] = { anim: BattleOtherAnims.sound.anim };
+BattleMoveAnims['acidrain'] = { anim: BattleMoveAnims['smog'].anim };
 // Castle Walls doesn't need any animations.
