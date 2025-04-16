@@ -37268,3 +37268,4 @@ BattleMoveAnims['fluteofdragon'] = {
 		BattleOtherAnims.sound.anim(scene, [attacker, defender]);
 	}
 };
+BattleMoveAnims['carddestroy'] = { anim: BattleOtherAnims.sound.anim };
