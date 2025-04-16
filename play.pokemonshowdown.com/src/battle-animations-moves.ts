@@ -37273,4 +37273,6 @@ BattleMoveAnims['manarestoring'] = { anim: BattleOtherAnims.sound.anim };
 BattleMoveAnims['acidrain'] = { anim: BattleMoveAnims['smog'].anim };
 BattleMoveAnims['heytrunade'] = { anim: BattleMoveAnims['hurricane'].anim };
 BattleMoveAnims['solemnwish'] = { anim: BattleMoveAnims['wish'].anim };
+BattleMoveAnims['appointeroftheredlotus'] = { anim: BattleMoveAnims['mindreader'].anim};
+BattleMoveAnims['blackpendant'] = { anim: BattleOtherAnims.selfstatus.anim };
 // Castle Walls doesn't need any animations.
