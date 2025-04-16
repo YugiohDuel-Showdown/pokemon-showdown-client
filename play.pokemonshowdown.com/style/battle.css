@@ -562,6 +562,12 @@ License: GPLv2
 	display: none;
 	position: absolute;
 }
+.sidecondition-froggyforcefield {
+	background: #0088AA;
+	border: 1px solid #027780;
+	display: none;
+	position: absolute;
+}
 .sidecondition-reflect {
 	background: #EEEEEE;
 	border: 1px solid #888888;

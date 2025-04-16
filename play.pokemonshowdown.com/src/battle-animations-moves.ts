@@ -37269,3 +37269,4 @@ BattleMoveAnims['fluteofdragon'] = {
 	}
 };
 BattleMoveAnims['carddestroy'] = { anim: BattleOtherAnims.sound.anim };
+// Castle Walls doesn't need any animations.
