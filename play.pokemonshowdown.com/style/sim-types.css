@@ -374,9 +374,9 @@
 
 .movemenu button.type-Fairy {
 	/* bg: 97 to 90, border: 70 */
-	background: hsl(310,41%,93%);
+	background: #f4e6f2;
 	background: linear-gradient(to bottom,  hsl(310,41%,97%),  hsl(310,41%,84%));
-	border-color: hsl(310,41%,70%);
+	border-color: #d293c7;
 }
 .movemenu button.type-Fairy small {
 	color: hsl(310,41%,41%);

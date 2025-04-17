@@ -37078,7 +37078,72 @@ BattleMoveAnims['frenzyfang'] = { anim: BattleMoveAnims['crunch'].anim };
 BattleMoveAnims['firehose'] = { anim: BattleMoveAnims['scald'].anim };
 BattleMoveAnims['therecanonlybeone'] = { anim: BattleMoveAnims['trickortreat'].anim }; // will change this later.
 BattleMoveAnims['clearstream'] = { anim: BattleMoveAnims['hurricane'].anim }; // might change this.
-BattleMoveAnims['silverbowandarrow'] = { anim: BattleMoveAnims['iciclespear'].anim }; // will be changed.
+BattleMoveAnims['silverbowandarrow'] = { anim: (scene, [attacker, defender]) => {
+	scene.backgroundEffect('linear-gradient(#d293c7 30%, #f4e6f2', 1000, 0.4);
+	scene.showEffect('iceball', {
+		x: attacker.x,
+		y: attacker.y,
+		z: attacker.z,
+		scale: 1,
+		opacity: 0.5,
+	}, {
+		scale: 3,
+		opacity: 0,
+	}, 'linear');
+	scene.showEffect('iceball', {
+		x: attacker.x,
+		y: attacker.y - 35,
+		z: attacker.z,
+		scale: 0.1,
+		opacity: 0.4,
+		time: 0,
+	}, {
+		x: attacker.x,
+		y: attacker.y + 200,
+		z: attacker.z,
+		scale: 0.2,
+		opacity: 0,
+		time: 300,
+	}, 'decel');
+
+	scene.showEffect('iceball', {
+		x: defender.x,
+		y: defender.y + 200,
+		z: defender.behind(-10),
+		opacity: 0.4,
+		xscale: 0.1,
+		yscale: 5,
+		time: 575,
+	}, {
+		y: defender.y + 150,
+		z: defender.behind(-10),
+		opacity: 0,
+		time: 825,
+	}, 'decel');
+	scene.showEffect('iceball', {
+		x: defender.x,
+		y: defender.y - 50,
+		z: defender.z,
+		opacity: 0.4,
+		xscale: 0.3,
+		yscale: 0.1,
+		time: 590,
+	}, {
+		xscale: 0.6,
+		yscale: 0.1,
+		opacity: 0,
+		time: 825,
+	}, 'linear', 'explode');
+
+	defender.delay(825);
+	defender.anim({
+		z: defender.behind(5),
+		time: 100,
+	}, 'swing');
+	defender.anim({
+		time: 300,
+	}, 'swing');
+} }; // will be changed.
 BattleMoveAnims['rainofmercy'] = { anim: BattleOtherAnims.hydroshot.anim }; // will change this later.
 BattleMoveAnims['flipthetable'] = { anim: BattleMoveAnims['circlethrow'].anim };
 BattleMoveAnims['blazeaccelerator'] = { anim: BattleOtherAnims.selfstatus.anim };
