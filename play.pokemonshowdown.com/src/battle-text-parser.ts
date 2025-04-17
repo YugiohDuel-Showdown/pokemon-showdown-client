@@ -949,11 +949,6 @@ export class BattleTextParser {
 				template = template.replace('[MOVE]', kwArgs.move).replace('[NUMBER]', kwArgs.number)
 					.replace('[ITEM]', kwArgs.item).replace('[NAME]', kwArgs.name);
 			}
-			if (id === 'appointeroftheredlotus') {
-				const template = this.template('activate', 'Appointer of the Red Lotus');
-				return line1 + template.replace('[POKEMON]', this.pokemon(kwArgs.of)).replace('[ITEM]', kwArgs.move)
-					.replace('[TARGET]', this.pokemon(pokemon));
-			}
 			return line1 + template.replace('[POKEMON]', this.pokemon(pokemon)).replace('[TARGET]', this.pokemon(target))
 				.replace('[SOURCE]', this.pokemon(kwArgs.of));
 		}
