@@ -1646,6 +1646,9 @@ export class BattleScene implements BattleSceneStub {
 			case 5:
 				this.bgm = BattleSound.loadBgm(`dl-yugo.mp3`, 302000, 1812000, this.bgm);
 				break;
+			case 6:
+				this.bgm = BattleSound.loadBgm(`dl-leo.mp3`, 186000, 1116000, this.bgm);
+				break;
 			default:
 				this.bgm = BattleSound.loadBgm(`tdotr-1.mp3`, 1029000, 2058000, this.bgm);
 				break;
