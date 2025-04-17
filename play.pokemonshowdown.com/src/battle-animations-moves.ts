@@ -37062,73 +37062,6 @@ BattleMoveAnims['shrink'] = { anim: BattleMoveAnims['minimize'].anim };
 BattleMoveAnims['mechanizedmelee'] = { anim: BattleOtherAnims.punchattack.anim };
 BattleMoveAnims['celestialsword'] = { anim: BattleOtherAnims.slashattack.anim };
 BattleMoveAnims['sparkblaster'] = { anim: BattleMoveAnims['zapcannon'].anim };
-BattleMoveAnims['mysticalspacetyphoon'] = { anim: (scene, [attacker, defender]) => {
-	scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-space.png')`, 1300, 0.5);
-	
-	// Hurricane
-	for (let i = 0; i < 4; i++) {
-		scene.showEffect('wisp', {
-			x: defender.x + 50,
-			y: defender.y - 35,
-			z: defender.z,
-			scale: 0.2,
-			opacity: 1,
-			time: 200 * i,
-		}, {
-			x: defender.x - 50,
-			y: defender.y,
-			z: defender.z,
-			scale: 0.4,
-			opacity: 0.4,
-			time: 200 * i + 200,
-		}, 'linear', 'fade');
-		scene.showEffect('wisp', {
-			x: defender.x - 50,
-			y: defender.y + 35,
-			z: defender.z,
-			scale: 0.2,
-			opacity: 1,
-			time: 200 * i,
-		}, {
-			x: defender.x + 50,
-			y: defender.y,
-			z: defender.z,
-			scale: 0.4,
-			opacity: 0.4,
-			time: 200 * i + 200,
-		}, 'linear', 'fade');
-		scene.showEffect('wisp', {
-			x: defender.x + 50,
-			y: defender.y,
-			z: defender.z,
-			scale: 0.2,
-			opacity: 1,
-			time: 200 * i,
-		}, {
-			x: defender.x - 50,
-			y: defender.y - 35,
-			z: defender.z,
-			scale: 0.4,
-			opacity: 0.4,
-			time: 200 * i + 200,
-		}, 'linear', 'fade');
-		scene.showEffect('wisp', {
-			x: defender.x - 50,
-			y: defender.y,
-			z: defender.z,
-			scale: 0.2,
-			opacity: 1,
-			time: 200 * i,
-		}, {
-			x: defender.x + 50,
-			y: defender.y - 35,
-			z: defender.z,
-			scale: 0.4,
-			opacity: 0.4,
-			time: 200 * i + 200,
-		}, 'linear', 'fade');
-	}
-}};
 BattleMoveAnims['parasiteparacide'] = { anim: BattleMoveAnims['bulletseed'].anim };
 BattleMoveAnims['swordsofrevealinglight'] = { anim: BattleMoveAnims['swordsdance'].anim };
 BattleMoveAnims['stridentblaze'] = { anim: BattleMoveAnims['thunderbolt'].anim }; // might change.
@@ -37204,7 +37137,7 @@ BattleMoveAnims['zombieworld'] = {
 BattleMoveAnims['wrathofneos'] = { anim: BattleMoveAnims['judgement'].anim };
 BattleMoveAnims['bookofmoon'] = { anim: BattleMoveAnims['moonlight'].anim };
 BattleMoveAnims['diamondbladestrike'] = { anim: BattleOtherAnims.slashattack.anim };
-BattleMoveAnims['1000knives'] = { anim: BattleMoveAnims['swift'].anim }; // Unsure what to do for this one.
+BattleMoveAnims['1000knives'] = { anim: BattleMoveAnims['powergem'].anim }; // Unsure what to do for this one.
 BattleMoveAnims['hammershot'] = { anim: BattleMoveAnims['gigahammer'].anim };
 BattleMoveAnims['claycharge'] = { anim: BattleMoveAnims['rockslide'].anim };
 BattleMoveAnims['ookazi'] = { anim: BattleMoveAnims['heatwave'].anim };
@@ -37239,7 +37172,7 @@ BattleMoveAnims['recklessgreed'] = { anim: BattleOtherAnims.selfstatus.anim };
 BattleMoveAnims['dragonicattack'] = { anim: BattleMoveAnims['dragonclaw'].anim };
 BattleMoveAnims['stimpack'] = { anim: BattleOtherAnims.selfstatus.anim };
 BattleMoveAnims['whiteelephantgift'] = { anim: BattleMoveAnims['present'].anim };
-BattleMoveAnims['beastfangs'] = { anim: BattleMoveAnims['superfang'].anim };
+BattleMoveAnims['beastfangs'] = { anim: BattleMoveAnims['crunch'].anim };
 BattleMoveAnims['yamiblow'] = { anim: BattleMoveAnims['darkpulse'].anim };
 BattleMoveAnims['ivyshackles'] = { anim: BattleMoveAnims['powerwhip'].anim };
 BattleMoveAnims['redeyesburn'] = { anim: BattleMoveAnims['fusionflare'].anim };
@@ -37276,3 +37209,70 @@ BattleMoveAnims['solemnwish'] = { anim: BattleMoveAnims['wish'].anim };
 BattleMoveAnims['appointeroftheredlotus'] = { anim: BattleMoveAnims['mindreader'].anim};
 BattleMoveAnims['blackpendant'] = { anim: BattleOtherAnims.selfstatus.anim };
 // Castle Walls doesn't need any animations.
+BattleMoveAnims['mysticalspacetyphoon'] = { anim: (scene, [attacker, defender]) => {
+	scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-space.png')`, 1300, 0.5);
+	
+	// Hurricane
+	for (let i = 0; i < 4; i++) {
+		scene.showEffect('wisp', {
+			x: defender.x + 50,
+			y: defender.y - 35,
+			z: defender.z,
+			scale: 0.2,
+			opacity: 1,
+			time: 200 * i,
+		}, {
+			x: defender.x - 50,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.4,
+			opacity: 0.4,
+			time: 200 * i + 200,
+		}, 'linear', 'fade');
+		scene.showEffect('wisp', {
+			x: defender.x - 50,
+			y: defender.y + 35,
+			z: defender.z,
+			scale: 0.2,
+			opacity: 1,
+			time: 200 * i,
+		}, {
+			x: defender.x + 50,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.4,
+			opacity: 0.4,
+			time: 200 * i + 200,
+		}, 'linear', 'fade');
+		scene.showEffect('wisp', {
+			x: defender.x + 50,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.2,
+			opacity: 1,
+			time: 200 * i,
+		}, {
+			x: defender.x - 50,
+			y: defender.y - 35,
+			z: defender.z,
+			scale: 0.4,
+			opacity: 0.4,
+			time: 200 * i + 200,
+		}, 'linear', 'fade');
+		scene.showEffect('wisp', {
+			x: defender.x - 50,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.2,
+			opacity: 1,
+			time: 200 * i,
+		}, {
+			x: defender.x + 50,
+			y: defender.y - 35,
+			z: defender.z,
+			scale: 0.4,
+			opacity: 0.4,
+			time: 200 * i + 200,
+		}, 'linear', 'fade');
+	}
+}};
