@@ -727,7 +727,7 @@ export class BattleTextParser {
 			if (id === 'appointeroftheredlotus') {
 				const hasTarget = kwArgs.of && pokemon && kwArgs.of !== pokemon;
 				const template = this.template('activate', "Appointer of the Red Lotus");
-				return line1 + template.replace('[POKEMON]', this.pokemon(kwArgs.of)).replace("[ITEM]", this.effect(item))
+				return line1 + template.replace('[POKEMON]', this.pokemon(kwArgs.of)).replace("[ITEM]", this.effect(item)).replace('[MOVE]', '')
 					.replace("[TARGET]", this.pokemon(pokemon));
 			}
 			if (kwArgs.from) {
