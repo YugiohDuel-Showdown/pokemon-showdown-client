@@ -1968,6 +1968,7 @@ export class PokemonSprite extends Sprite {
 		froggyforcefield: ['Froggy Forcefield', 'good'],
 		badsimochi: ['Bad Simochi', 'good'],
 		castlewalls: ["Castle Walls", 'good'],
+		crushsword: ['Crush Sword', 'bad'],
 	};
 	forme = '';
 	cryurl: string | undefined = undefined;

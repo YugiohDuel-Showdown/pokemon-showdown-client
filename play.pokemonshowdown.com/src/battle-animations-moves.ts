@@ -37049,11 +37049,11 @@ BattleMoveAnims['venomvapor'] = { anim: BattleMoveAnims['sludgewave'].anim };
 BattleMoveAnims['heavystorm'] = { anim: BattleMoveAnims['defog'].anim };
 BattleMoveAnims['goatthrash'] = { anim: BattleMoveAnims['thrash'].anim };
 BattleMoveAnims['goatheal'] = { anim: BattleMoveAnims['milkdrink'].anim };
-BattleMoveAnims['meltedice'] = { anim: BattleMoveAnims['icebeam'].anim }; // Might change this one.
+BattleMoveAnims['meltingice'] = { anim: BattleMoveAnims['icebeam'].anim }; // Might change this one.
 BattleMoveAnims['fakehero'] = { anim: BattleOtherAnims.attack.anim };
 BattleMoveAnims['manabreak'] = { anim: BattleMoveAnims['psychic'].anim };
 BattleMoveAnims['graveoffire'] = { anim: BattleMoveAnims['fireblast'].anim, prepareAnim: BattleOtherAnims.chargestatus.anim };
-BattleMoveAnims['rockcrushsword'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['crushsword'] = { anim: BattleOtherAnims.slashattack.anim };
 BattleMoveAnims['descroaking'] = { anim: BattleOtherAnims.selfstatus.anim };
 BattleMoveAnims['hungrybite'] = { anim: BattleMoveAnims['superfang'].anim };
 BattleMoveAnims['fiendishchain'] = { anim: BattleMoveAnims['bind'].anim };
@@ -37308,4 +37308,8 @@ BattleMoveAnims['mysticalspacetyphoon'] = { anim: (scene, [attacker, defender]) 
 		}, 'linear', 'fade');
 	}
 }};
+BattleMoveAnims['emeraldflame'] = { anim: BattleMoveAnims['flamethrower'].anim };
+BattleMoveAnims['skulldice'] = { anim: BattleMoveAnims['mindreader'].anim };
+BattleMoveAnims['michizure'] = { anim: BattleMoveAnims['retaliate'].anim };
+BattleMoveAnims['honestcry'] = { anim: BattleMoveAnims['boomburst'].anim };
 // End of Custom Animations
