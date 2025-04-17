@@ -37177,7 +37177,7 @@ BattleMoveAnims['fluteofdragon'] = {
 };
 
 BattleMoveAnims['mysticalspacetyphoon'] = { anim: (scene, [attacker, defender]) => {
-	scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-space.png')`, 1300);
+	scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-space.jpg')`, 1000, 0.7);
 	
 	// Hurricane
 	for (let i = 0; i < 4; i++) {
