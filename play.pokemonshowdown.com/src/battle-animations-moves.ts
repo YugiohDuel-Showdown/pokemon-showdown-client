@@ -36914,7 +36914,7 @@ BattleMoveAnims['falseyield'] = { anim: BattleMoveAnims['feintattack'].anim };
 BattleMoveAnims['meteorassault'] = { anim: BattleMoveAnims['aurasphere'].anim };
 BattleMoveAnims['eternabeam'] = { anim: BattleMoveAnims['roaroftime'].anim };
 BattleMoveAnims['steelbeam'] = { anim: BattleMoveAnims['magnetbomb'].anim };
-BattleMoveAnims['strangesteam'] = { anim: BattleMoveAnims['dazzlinggleam'].anim };
+BattleMoveAnims['weirdsteam'] = { anim: BattleMoveAnims['dazzlinggleam'].anim };
 BattleMoveAnims['jealousburn'] = { anim: BattleMoveAnims['heatwave'].anim };
 BattleMoveAnims['grassyglide'] = { anim: BattleMoveAnims['powerwhip'].anim };
 BattleMoveAnims['risingvoltage'] = { anim: BattleMoveAnims['discharge'].anim };
@@ -37243,5 +37243,4 @@ BattleMoveAnims['mysticalspacetyphoon'] = { anim: (scene, [attacker, defender]) 
 		}, 'linear', 'fade');
 	}
 }};
-BattleMoveAnims['weirdsteam'] = { anim: BattleMoveAnims['defog'].anim}
 // End of Custom Animations
