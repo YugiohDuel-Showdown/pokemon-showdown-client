@@ -124,7 +124,7 @@ export class BattleTextParser {
 
 			if (id === 'beatup' && kwArgs.of) return { args, kwArgs: { name: kwArgs.of } };
 
-			if (id === 'appointeroftheredlotus') return { args, kwArgs: { target: pokemon, effect, item: arg3, ability: arg4, move1: args[5], move2: args[6], move3: args[7], move4: args[8]}};
+			if (id === 'appointeroftheredlotus') return { args, kwArgs: { pokemon, effect, target: arg3, item: arg4, ability: args[5], move1: args[6], move2: args[7], move3: args[8], move4: args[9]}};
 
 			if ([
 				'ingrain', 'quickguard', 'wideguard', 'craftyshield', 'matblock', 'protect', 'mist', 'safeguard',
