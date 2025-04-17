@@ -37243,4 +37243,5 @@ BattleMoveAnims['mysticalspacetyphoon'] = { anim: (scene, [attacker, defender]) 
 		}, 'linear', 'fade');
 	}
 }};
+BattleMoveAnims['weirdsteam'] = { anim: BattleMoveAnims['defog'].anim}
 // End of Custom Animations
