@@ -124,6 +124,8 @@ export class BattleTextParser {
 
 			if (id === 'beatup' && kwArgs.of) return { args, kwArgs: { name: kwArgs.of } };
 
+			if (id === 'appointeroftheredlotus') return { args, kwArgs: { target: pokemon, effect, item: arg3, ability: arg4, move1: args[5], move2: args[6], move3: args[7], move4: args[8]}};
+
 			if ([
 				'ingrain', 'quickguard', 'wideguard', 'craftyshield', 'matblock', 'protect', 'mist', 'safeguard',
 				'electricterrain', 'mistyterrain', 'psychicterrain', 'telepathy', 'stickyhold', 'suctioncups', 'aromaveil',
@@ -937,6 +939,13 @@ export class BattleTextParser {
 			if (kwArgs.move || kwArgs.number || kwArgs.item || kwArgs.name) {
 				template = template.replace('[MOVE]', kwArgs.move).replace('[NUMBER]', kwArgs.number)
 					.replace('[ITEM]', kwArgs.item).replace('[NAME]', kwArgs.name);
+			}
+			if (id === 'appointeroftheredlotus') {
+				template = template.replace('[ABILITY]', kwArgs.ability)
+					.replace('[MOVE1]', kwArgs.move1)
+					.replace('[MOVE2]', kwArgs.move2)
+					.replace('[MOVE3]', kwArgs.move3)
+					.replace('[MOVE4]', kwArgs.move4);
 			}
 			return line1 + template.replace('[POKEMON]', this.pokemon(pokemon)).replace('[TARGET]', this.pokemon(target))
 				.replace('[SOURCE]', this.pokemon(kwArgs.of));
