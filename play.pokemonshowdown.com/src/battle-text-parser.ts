@@ -686,11 +686,6 @@ export class BattleTextParser {
 				const template = this.template('start', ability);
 				return line1 + template.replace('[TEAM]', this.team(pokemon.slice(0, 2), true));
 			}
-			if (id === 'appointeroftheredlotus') {
-				const template = this.template('activate', 'Appointer of the Red Lotus');
-				return line1 + template.replace("[POKEMON]", this.pokemon(kwArgs.of)).replace('[ITEM]', this.effect(ability))
-					.replace('[TARGET]', this.pokemon(pokemon));
-			}
 			let templateId = 'start';
 			if (id === 'anticipation' || id === 'sturdy') templateId = 'activate';
 			const template = this.template(templateId, ability, 'NODEFAULT');
@@ -723,12 +718,6 @@ export class BattleTextParser {
 				const template = this.template(hasTarget ? 'activate' : 'activateNoTarget', "Frisk");
 				return line1 + template.replace('[POKEMON]', this.pokemon(kwArgs.of)).replace('[ITEM]', this.effect(item))
 					.replace('[TARGET]', this.pokemon(pokemon));
-			}
-			if (id === 'appointeroftheredlotus') {
-				const hasTarget = kwArgs.of && pokemon && kwArgs.of !== pokemon;
-				const template = this.template('activate', "Appointer of the Red Lotus");
-				return line1 + template.replace('[POKEMON]', this.pokemon(kwArgs.of)).replace("[ITEM]", this.effect(item)).replace('[MOVE]', '')
-					.replace("[TARGET]", this.pokemon(pokemon));
 			}
 			if (kwArgs.from) {
 				const template = this.template('addItem', kwArgs.from);
