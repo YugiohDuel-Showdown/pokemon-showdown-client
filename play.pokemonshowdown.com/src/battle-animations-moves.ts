@@ -37050,7 +37050,6 @@ BattleMoveAnims['yami'] = {
 		BattleOtherAnims.dance.anim(scene, [attacker]);
 	}
 };
-
 BattleMoveAnims['zombieworld'] = {
 	anim: (scene, [attacker, defender]) => {
 		scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-spl.png')`, 1000, 0.3);
@@ -37140,7 +37139,7 @@ BattleMoveAnims['mysticalspacetyphoon'] = { anim: (scene, [attacker, defender]) 
 		}, 'linear', 'fade');
 	}
 }};
-// End of Custom ANimations
+// End of Custom Animations
 
 BattleMoveAnims['dynamaxcannon'] = { anim: BattleMoveAnims['dragonpulse'].anim };
 BattleMoveAnims['snipeshot'] = { anim: BattleMoveAnims['waterpulse'].anim };

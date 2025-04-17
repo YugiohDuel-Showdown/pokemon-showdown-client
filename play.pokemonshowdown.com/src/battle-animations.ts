@@ -1640,6 +1640,9 @@ export class BattleScene implements BattleSceneStub {
 			case 3:
 				this.bgm = BattleSound.loadBgm(`tdotr-3.mp3`, 987000, 1974000, this.bgm);
 				break;
+			case 4:
+				this.bgm = BattleSound.loadBgm(`dl-varis.mp3`, 297000, 1782000, this.bgm);
+				break;
 			default:
 				this.bgm = BattleSound.loadBgm(`tdotr-1.mp3`, 1029000, 2058000, this.bgm);
 				break;
