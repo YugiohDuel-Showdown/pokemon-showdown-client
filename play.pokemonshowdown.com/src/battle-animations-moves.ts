@@ -36882,43 +36882,265 @@ BattleMoveAnims['10000000voltthunderbolt'] = { anim: BattleMoveAnims['triattack'
 BattleMoveAnims['menacingmoonrazemaelstrom'] = { anim: BattleMoveAnims['moongeistbeam'].anim };
 BattleMoveAnims['lightthatburnsthesky'] = { anim: BattleMoveAnims['fusionflare'].anim };
 
-BattleMoveAnims['maxflutterby'] = BattleMoveAnims['savagespinout'];
-BattleMoveAnims['gmaxbefuddle'] = BattleMoveAnims['savagespinout'];
-BattleMoveAnims['maxdarkness'] = BattleMoveAnims['maliciousmoonsault'];
-BattleMoveAnims['gmaxsnooze'] = BattleMoveAnims['maliciousmoonsault'];
-BattleMoveAnims['maxwyrmwind'] = BattleMoveAnims['devastatingdrake'];
-BattleMoveAnims['gmaxdepletion'] = BattleMoveAnims['devastatingdrake'];
-BattleMoveAnims['maxlightning'] = BattleMoveAnims['gigavolthavoc'];
-BattleMoveAnims['maxstarfall'] = BattleMoveAnims['twinkletackle'];
-BattleMoveAnims['gmaxfinale'] = BattleMoveAnims['twinkletackle'];
-BattleMoveAnims['gmaxsmite'] = BattleMoveAnims['twinkletackle'];
-BattleMoveAnims['maxknuckle'] = BattleMoveAnims['alloutpummeling'];
-BattleMoveAnims['gmaxoneblow'] = BattleMoveAnims['alloutpummeling'];
-BattleMoveAnims['gmaxrapidflow'] = BattleMoveAnims['alloutpummeling'];
-BattleMoveAnims['maxflare'] = BattleMoveAnims['infernooverdrive'];
-BattleMoveAnims['gmaxcentiferno'] = BattleMoveAnims['infernooverdrive'];
-BattleMoveAnims['gmaxfireball'] = BattleMoveAnims['infernooverdrive'];
-BattleMoveAnims['maxairstream'] = BattleMoveAnims['supersonicskystrike'];
-BattleMoveAnims['maxphantasm'] = BattleMoveAnims['neverendingnightmare'];
-BattleMoveAnims['maxovergrowth'] = BattleMoveAnims['bloomdoom'];
-BattleMoveAnims['gmaxvinelash'] = BattleMoveAnims['bloomdoom'];
-BattleMoveAnims['gmaxdrumsolo'] = BattleMoveAnims['bloomdoom'];
-BattleMoveAnims['maxquake'] = BattleMoveAnims['tectonicrage'];
-BattleMoveAnims['gmaxsandblast'] = BattleMoveAnims['tectonicrage'];
-BattleMoveAnims['maxhailstorm'] = BattleMoveAnims['subzeroslammer'];
-BattleMoveAnims['gmaxresonance'] = BattleMoveAnims['subzeroslammer'];
-BattleMoveAnims['maxstrike'] = BattleMoveAnims['breakneckblitz'];
-BattleMoveAnims['gmaxcuddle'] = BattleMoveAnims['breakneckblitz'];
-BattleMoveAnims['gmaxreplenish'] = BattleMoveAnims['breakneckblitz'];
-BattleMoveAnims['maxooze'] = BattleMoveAnims['aciddownpour'];
-BattleMoveAnims['gmaxmalodor'] = BattleMoveAnims['aciddownpour'];
-BattleMoveAnims['maxmindstorm'] = BattleMoveAnims['shatteredpsyche'];
-BattleMoveAnims['gmaxgravitas'] = BattleMoveAnims['shatteredpsyche'];
-BattleMoveAnims['maxrockfall'] = BattleMoveAnims['continentalcrush'];
-BattleMoveAnims['maxsteelspike'] = BattleMoveAnims['corkscrewcrash'];
-BattleMoveAnims['maxgeyser'] = BattleMoveAnims['hydrovortex'];
-BattleMoveAnims['gmaxcannonade'] = BattleMoveAnims['hydrovortex'];
-BattleMoveAnims['gmaxhydrosnipe'] = BattleMoveAnims['hydrovortex'];
+// Custom Moves from Yugioh Pokeduel
+BattleMoveAnims['darkmagicattack'] = { anim: BattleMoveAnims['darkpulse'].anim };
+BattleMoveAnims['whitelightning'] = { anim: BattleMoveAnims['thunder'].anim };
+// BattleMoveAnims['skyscraper'] = {}; // Not sure what this should look like.
+BattleMoveAnims['obliterate'] = { anim: BattleMoveAnims['explosion'].anim };
+BattleMoveAnims['darkburningattack'] = { anim: BattleMoveAnims['heatwave'].anim };
+BattleMoveAnims['burststream'] = { anim: BattleMoveAnims['dragonpulse'].anim };
+BattleMoveAnims['dragonsword'] = { anim: BattleOtherAnims.slashattack.anim }; // This might change.
+BattleMoveAnims['skyscorcher'] = { anim: BattleMoveAnims['fusionflare'].anim }; // Going off of Light That Burns the Sky.
+BattleMoveAnims['flamesword'] = { anim: BattleOtherAnims.slashattack.anim }; // This can be change.
+BattleMoveAnims['spiralspear'] = { anim: BattleMoveAnims['iciclespear'].anim }; // Will most likely be changed.
+BattleMoveAnims['thundersword'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['infernoblast'] = { anim: BattleMoveAnims['fireblast'].anim };
+BattleMoveAnims['axeslam'] = { anim: BattleMoveAnims['stoneaxe'].anim };
+BattleMoveAnims['metalthrust'] = { anim: BattleMoveAnims['flashcannon'].anim };
+BattleMoveAnims['cyberslash'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['tripleslice'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['cybershock'] = { anim: BattleMoveAnims['spark'].anim };
+BattleMoveAnims['celticblade'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['darklight'] = { anim: BattleMoveAnims['darkpulse'].anim }; // Will probably be changed.
+BattleMoveAnims['vengeance'] = { anim: BattleMoveAnims['thrash'].anim };
+BattleMoveAnims['magnetsword'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['fistoffate'] = { anim: BattleOtherAnims.punchattack.anim };
+BattleMoveAnims['thunderforce'] = { anim: BattleMoveAnims['thunder'].anim };
+BattleMoveAnims['phoenixform'] = { anim: BattleMoveAnims['fusionflare'].anim };
+BattleMoveAnims['defensemode'] = { anim: BattleMoveAnims['kingsshield'].anim };
+BattleMoveAnims['bombardment'] = { anim: BattleMoveAnims['syrupbomb'].anim };
+BattleMoveAnims['destinyboard'] = { prepareAnim: BattleOtherAnims.chargestatus.anim, anim: BattleMoveAnims['darkpulse'].anim }; // might change anim to something else.
+BattleMoveAnims['bubbleblast'] = { anim: BattleMoveAnims['bubblebeam'].anim };
+BattleMoveAnims['scrapfist'] = { anim: BattleOtherAnims.punchattack.anim };
+BattleMoveAnims['toxicbreath'] = { anim: BattleMoveAnims['smog'].anim };
+BattleMoveAnims['silentburn'] = { anim: BattleMoveAnims['blastburn'].anim };
+BattleMoveAnims['neutronblast'] = { anim: BattleMoveAnims['photongeyser'].anim };
+BattleMoveAnims['negate'] = { anim: BattleMoveAnims['block'].anim };
+BattleMoveAnims['shrink'] = { anim: BattleMoveAnims['minimize'].anim };
+BattleMoveAnims['mechanizedmelee'] = { anim: BattleOtherAnims.punchattack.anim };
+BattleMoveAnims['celestialsword'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['sparkblaster'] = { anim: BattleMoveAnims['zapcannon'].anim };
+BattleMoveAnims['parasiteparacide'] = { anim: BattleMoveAnims['bulletseed'].anim };
+BattleMoveAnims['swordsofrevealinglight'] = { anim: BattleMoveAnims['swordsdance'].anim };
+BattleMoveAnims['stridentblaze'] = { anim: BattleMoveAnims['thunderbolt'].anim }; // might change.
+BattleMoveAnims['metalmorph'] = { anim: BattleOtherAnims.selfstatus.anim };
+BattleMoveAnims['mirrorwall'] = { anim: BattleOtherAnims.selfstatus.anim };
+BattleMoveAnims['ringofdestruction'] = { anim: BattleMoveAnims['hyperbeam'].anim };
+BattleMoveAnims['chaosscepterblast'] = { anim: BattleMoveAnims['nightslash'].anim };
+BattleMoveAnims['silentslash'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['pointtopoint'] = { anim: BattleOtherAnims.selfstatus.anim };
+BattleMoveAnims['naptime'] = { anim: BattleMoveAnims['rest'].anim };
+BattleMoveAnims['ojamadeltahurricane'] = { anim: BattleMoveAnims['hurricane'].anim };
+BattleMoveAnims['transcendantwings'] = { anim: BattleOtherAnims.flight.anim };
+BattleMoveAnims['paralyzingpelletbarrage'] = { anim: BattleMoveAnims['bulletseed'].anim };
+BattleMoveAnims['clockprison'] = { anim: BattleMoveAnims['nastyplot'].anim };
+BattleMoveAnims['ultimatepound'] = { anim: BattleMoveAnims['pound'].anim };
+BattleMoveAnims['rainbowrefraction'] = { anim: BattleMoveAnims['dragonpulse'].anim };
+BattleMoveAnims['neosforce'] = { anim: BattleOtherAnims.attack.anim }; // Unsure what this should look like.
+BattleMoveAnims['megamorph'] = { anim: BattleOtherAnims.selfstatus.anim };
+BattleMoveAnims['hornofchaos'] = { anim: BattleMoveAnims['megahorn'].anim };
+BattleMoveAnims['ectoplasmicfortification'] = { anim: BattleOtherAnims.selfstatus.anim };
+BattleMoveAnims['spellbindingcircle'] = { anim: BattleMoveAnims['darkvoid'].anim };
+BattleMoveAnims['venomvapor'] = { anim: BattleMoveAnims['sludgewave'].anim };
+BattleMoveAnims['heavystorm'] = { anim: BattleMoveAnims['defog'].anim };
+BattleMoveAnims['goatthrash'] = { anim: BattleMoveAnims['thrash'].anim };
+BattleMoveAnims['goatheal'] = { anim: BattleMoveAnims['milkdrink'].anim };
+BattleMoveAnims['meltedice'] = { anim: BattleMoveAnims['icebeam'].anim }; // Might change this one.
+BattleMoveAnims['fakehero'] = { anim: BattleOtherAnims.attack.anim };
+BattleMoveAnims['manabreak'] = { anim: BattleMoveAnims['psychic'].anim };
+BattleMoveAnims['graveoffire'] = { anim: BattleMoveAnims['fireblast'].anim, prepareAnim: BattleOtherAnims.chargestatus.anim };
+BattleMoveAnims['rockcrushsword'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['descroaking'] = { anim: BattleOtherAnims.selfstatus.anim };
+BattleMoveAnims['hungrybite'] = { anim: BattleMoveAnims['superfang'].anim };
+BattleMoveAnims['fiendishchain'] = { anim: BattleMoveAnims['bind'].anim };
+BattleMoveAnims['exchange'] = { anim: BattleOtherAnims.selfstatus.anim }; // Unsure what this move does.
+BattleMoveAnims['legendaryocean'] = { anim: BattleMoveAnims['surf'].anim };
+BattleMoveAnims['leviastream'] = { anim: BattleMoveAnims['originpulse'].anim };
+BattleMoveAnims['flameblast'] = { anim: BattleMoveAnims['fireblast'].anim };
+BattleMoveAnims['sparks'] = { anim: BattleMoveAnims['ember'].anim };
+BattleMoveAnims['cosmicflare'] = { anim: BattleMoveAnims['blueflare'].anim };
+BattleMoveAnims['thunderstroke'] = { anim: BattleMoveAnims['thunder'].anim };
+BattleMoveAnims['wrathofneos'] = { anim: BattleMoveAnims['judgement'].anim };
+BattleMoveAnims['bookofmoon'] = { anim: BattleMoveAnims['moonlight'].anim };
+BattleMoveAnims['diamondbladestrike'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['1000knives'] = { anim: BattleMoveAnims['powergem'].anim }; // Unsure what to do for this one.
+BattleMoveAnims['hammershot'] = { anim: BattleMoveAnims['gigahammer'].anim };
+BattleMoveAnims['claycharge'] = { anim: BattleMoveAnims['rockslide'].anim };
+BattleMoveAnims['ookazi'] = { anim: BattleMoveAnims['heatwave'].anim };
+BattleMoveAnims['ravagingfist'] = { anim: BattleOtherAnims.punchattack.anim };
+BattleMoveAnims['ceruleanskyfire'] = { anim: BattleMoveAnims['lightthatburnsthesky'].anim };
+BattleMoveAnims['hyperblaze'] = { anim: BattleMoveAnims['fireblast'].anim, prepareAnim: BattleOtherAnims.chargestatus.anim };
+BattleMoveAnims['frenzyfang'] = { anim: BattleMoveAnims['crunch'].anim };
+BattleMoveAnims['firehose'] = { anim: BattleMoveAnims['scald'].anim };
+BattleMoveAnims['therecanonlybeone'] = { anim: BattleMoveAnims['trickortreat'].anim }; // will change this later.
+BattleMoveAnims['clearstream'] = { anim: BattleMoveAnims['hurricane'].anim }; // might change this.
+BattleMoveAnims['silverbowandarrow'] = { anim: BattleMoveAnims['spiritshackle'].anim }; // will be changed.
+BattleMoveAnims['rainofmercy'] = { anim: BattleOtherAnims.hydroshot.anim }; // will change this later.
+BattleMoveAnims['flipthetable'] = { anim: BattleMoveAnims['circlethrow'].anim };
+BattleMoveAnims['blazeaccelerator'] = { anim: BattleOtherAnims.selfstatus.anim };
+BattleMoveAnims['triblazeaccelerator'] = { anim: BattleOtherAnims.selfstatus.anim };
+BattleMoveAnims['lastwill'] = { anim: BattleMoveAnims['lastrespects'].anim };
+BattleMoveAnims['carderaser'] = { anim: BattleMoveAnims['block'].anim };
+BattleMoveAnims['deliquentduo'] = { anim: BattleOtherAnims.contactattack.anim }; // will change later.
+BattleMoveAnims['marshglasses'] = { anim: BattleMoveAnims['meanlook'].anim };
+BattleMoveAnims['froggyforcefield'] = { anim: BattleMoveAnims['reflect'].anim };
+BattleMoveAnims['majestyslash'] = { anim: BattleOtherAnims.slashattack.anim };
+BattleMoveAnims['ordertosmash'] = { anim: BattleMoveAnims['gigahammer'].anim };
+BattleMoveAnims['badsimochi'] = { anim: BattleOtherAnims.selfstatus.anim };
+BattleMoveAnims['cupoface'] = { anim: BattleMoveAnims['present'].anim };
+BattleMoveAnims['recklessgreed'] = { anim: BattleOtherAnims.selfstatus.anim };
+BattleMoveAnims['dragonicattack'] = { anim: BattleMoveAnims['dragonclaw'].anim };
+BattleMoveAnims['stimpack'] = { anim: BattleOtherAnims.selfstatus.anim };
+BattleMoveAnims['whiteelephantgift'] = { anim: BattleMoveAnims['present'].anim };
+BattleMoveAnims['beastfangs'] = { anim: BattleMoveAnims['crunch'].anim };
+BattleMoveAnims['yamiblow'] = { anim: BattleMoveAnims['darkpulse'].anim };
+BattleMoveAnims['ivyshackles'] = { anim: BattleMoveAnims['powerwhip'].anim };
+BattleMoveAnims['redeyesburn'] = { anim: BattleMoveAnims['fusionflare'].anim };
+BattleMoveAnims['callofthehaunted'] = { anim: BattleMoveAnims['curse'].anim };
+BattleMoveAnims['dshield'] = { anim: BattleOtherAnims.selfstatus.anim };
+BattleMoveAnims['twintwister'] = { anim: BattleMoveAnims['twister'].anim };
+BattleMoveAnims['devilsclaw'] = { anim: BattleOtherAnims.clawattack.anim };
+BattleMoveAnims['shockrocket'] = { anim: BattleMoveAnims['fireblast'].anim };
+BattleMoveAnims['doomgaze'] = { anim: BattleMoveAnims['darkvoid'].anim };
+BattleMoveAnims['darkrulernomore'] = { anim: BattleMoveAnims['darkpulse'].anim };
+BattleMoveAnims['darkhole'] = { anim: BattleMoveAnims['darkvoid'].anim };
+BattleMoveAnims['skyripwing'] = { anim: BattleMoveAnims['bravebird'].anim };
+BattleMoveAnims['minddrain'] = { anim: BattleMoveAnims['meanlook'].anim };
+BattleMoveAnims['skilldrain'] = { anim: BattleOtherAnims.attack.anim };
+BattleMoveAnims['dusttornado'] = { anim: BattleMoveAnims['hurricane'].anim };
+BattleMoveAnims['coldwave'] = { anim: BattleMoveAnims['icywind'].anim };
+BattleMoveAnims['dragoncapturejar'] = { anim: BattleMoveAnims['bind'].anim };
+BattleMoveAnims['burningland'] = { anim: BattleMoveAnims['scorchingsand'].anim };
+BattleMoveAnims['windstorm'] = { anim: BattleMoveAnims['hurricane'].anim };
+BattleMoveAnims['thewarriorreturingalive'] = { anim: BattleOtherAnims.selfstatus.anim };
+BattleMoveAnims['powerbond'] = { anim: BattleOtherAnims.attack.anim };
+BattleMoveAnims['emergencyprovisions'] = { anim: BattleOtherAnims.selfstatus.anim };
+BattleMoveAnims['carddestroy'] = { anim: BattleOtherAnims.sound.anim };
+BattleMoveAnims['manarestoring'] = { anim: BattleOtherAnims.sound.anim };
+BattleMoveAnims['acidrain'] = { anim: BattleMoveAnims['smog'].anim };
+BattleMoveAnims['heytrunade'] = { anim: BattleMoveAnims['hurricane'].anim };
+BattleMoveAnims['solemnwish'] = { anim: BattleMoveAnims['wish'].anim };
+BattleMoveAnims['appointeroftheredlotus'] = { anim: BattleMoveAnims['mindreader'].anim};
+BattleMoveAnims['blackpendant'] = { anim: BattleOtherAnims.selfstatus.anim };
+// Castle Walls doesn't need any animations.
+BattleMoveAnims['forestterrain'] = {
+	anim: (scene, [attacker, defender]) => {
+		scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-forest.png')`, 1000, 0.3);
+		BattleOtherAnims.dance.anim(scene, [attacker]);
+	}
+};
+
+BattleMoveAnims['mountain'] = {
+	anim: (scene, [attacker, defender]) => {
+		scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-mountain.png)`, 1000, 0.3);
+		BattleOtherAnims.dance.anim(scene, [attacker]);
+	}
+};
+BattleMoveAnims['wasteland'] = {
+	anim: (scene, [attacker, defender]) => {
+		scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-desert.png')`, 1000, 0.3)
+		// Background will be replaced with something that makes sense once we get that background.
+		BattleOtherAnims.dance.anim(scene, [attacker]);
+	}
+};
+
+BattleMoveAnims['yami'] = {
+	anim: (scene, [attacker, defender]) => {
+		scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-npa.png')`, 1000, 0.3);
+		BattleOtherAnims.dance.anim(scene, [attacker]);
+	}
+};
+
+BattleMoveAnims['zombieworld'] = {
+	anim: (scene, [attacker, defender]) => {
+		scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-spl.png')`, 1000, 0.3);
+		// Will change this to something that fits this terrain better.
+		BattleOtherAnims.dance.anim(scene, [attacker]);
+	}
+};
+
+BattleMoveAnims['harpieshuntingground'] = { 
+	anim: (scene, [attacker, defender]) => {
+		scene.backgroundEffect(`url('${Config.routes.client}/fx/bg-thunderplains.png')`, 1000, 0.3);
+		BattleOtherAnims.dance.anim(scene, [attacker]);
+	}
+};
+
+BattleMoveAnims['fluteofdragon'] = { 
+	anim: (scene, [attacker, defender]) => {
+		scene.backgroundEffect('#574091', 900, 0.3);
+		BattleOtherAnims.sound.anim(scene, [attacker, defender]);
+	}
+};
+
+BattleMoveAnims['mysticalspacetyphoon'] = { anim: (scene, [attacker, defender]) => {
+	scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-space.png')`, 1300, 0.5);
+	
+	// Hurricane
+	for (let i = 0; i < 4; i++) {
+		scene.showEffect('wisp', {
+			x: defender.x + 50,
+			y: defender.y - 35,
+			z: defender.z,
+			scale: 0.2,
+			opacity: 1,
+			time: 200 * i,
+		}, {
+			x: defender.x - 50,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.4,
+			opacity: 0.4,
+			time: 200 * i + 200,
+		}, 'linear', 'fade');
+		scene.showEffect('wisp', {
+			x: defender.x - 50,
+			y: defender.y + 35,
+			z: defender.z,
+			scale: 0.2,
+			opacity: 1,
+			time: 200 * i,
+		}, {
+			x: defender.x + 50,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.4,
+			opacity: 0.4,
+			time: 200 * i + 200,
+		}, 'linear', 'fade');
+		scene.showEffect('wisp', {
+			x: defender.x + 50,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.2,
+			opacity: 1,
+			time: 200 * i,
+		}, {
+			x: defender.x - 50,
+			y: defender.y - 35,
+			z: defender.z,
+			scale: 0.4,
+			opacity: 0.4,
+			time: 200 * i + 200,
+		}, 'linear', 'fade');
+		scene.showEffect('wisp', {
+			x: defender.x - 50,
+			y: defender.y,
+			z: defender.z,
+			scale: 0.2,
+			opacity: 1,
+			time: 200 * i,
+		}, {
+			x: defender.x + 50,
+			y: defender.y - 35,
+			z: defender.z,
+			scale: 0.4,
+			opacity: 0.4,
+			time: 200 * i + 200,
+		}, 'linear', 'fade');
+	}
+}};
+// End of Custom ANimations
 
 BattleMoveAnims['dynamaxcannon'] = { anim: BattleMoveAnims['dragonpulse'].anim };
 BattleMoveAnims['snipeshot'] = { anim: BattleMoveAnims['waterpulse'].anim };
@@ -37024,255 +37246,3 @@ BattleMoveAnims['hydrosteam'] = { anim: BattleMoveAnims['steameruption'].anim };
 BattleMoveAnims['psyblade'] = { anim: BattleMoveAnims['psychocut'].anim };
 
 
-// Custom Moves from Yugioh Pokeduel
-BattleMoveAnims['darkmagicattack'] = { anim: BattleMoveAnims['darkpulse'].anim };
-BattleMoveAnims['whitelightning'] = { anim: BattleMoveAnims['thunder'].anim };
-// BattleMoveAnims['skyscraper'] = {}; // Not sure what this should look like.
-BattleMoveAnims['obliterate'] = { anim: BattleMoveAnims['explosion'].anim };
-BattleMoveAnims['darkburningattack'] = { anim: BattleMoveAnims['heatwave'].anim };
-BattleMoveAnims['burststream'] = { anim: BattleMoveAnims['dragonpulse'].anim };
-BattleMoveAnims['dragonsword'] = { anim: BattleOtherAnims.slashattack.anim }; // This might change.
-BattleMoveAnims['skyscorcher'] = { anim: BattleMoveAnims['fusionflare'].anim }; // Going off of Light That Burns the Sky.
-BattleMoveAnims['flamesword'] = { anim: BattleOtherAnims.slashattack.anim }; // This can be change.
-BattleMoveAnims['spiralspear'] = { anim: BattleMoveAnims['iciclespear'].anim }; // Will most likely be changed.
-BattleMoveAnims['thundersword'] = { anim: BattleOtherAnims.slashattack.anim };
-BattleMoveAnims['infernoblast'] = { anim: BattleMoveAnims['fireblast'].anim };
-BattleMoveAnims['axeslam'] = { anim: BattleMoveAnims['stoneaxe'].anim };
-BattleMoveAnims['metalthrust'] = { anim: BattleMoveAnims['flashcannon'].anim };
-BattleMoveAnims['cyberslash'] = { anim: BattleOtherAnims.slashattack.anim };
-BattleMoveAnims['tripleslice'] = { anim: BattleOtherAnims.slashattack.anim };
-BattleMoveAnims['cybershock'] = { anim: BattleMoveAnims['spark'].anim };
-BattleMoveAnims['celticblade'] = { anim: BattleOtherAnims.slashattack.anim };
-BattleMoveAnims['darklight'] = { anim: BattleMoveAnims['darkpulse'].anim }; // Will probably be changed.
-BattleMoveAnims['vengeance'] = { anim: BattleMoveAnims['thrash'].anim };
-BattleMoveAnims['magnetsword'] = { anim: BattleOtherAnims.slashattack.anim };
-BattleMoveAnims['fistoffate'] = { anim: BattleOtherAnims.punchattack.anim };
-BattleMoveAnims['thunderforce'] = { anim: BattleMoveAnims['thunder'].anim };
-BattleMoveAnims['phoenixform'] = { anim: BattleMoveAnims['fusionflare'].anim };
-BattleMoveAnims['defensemode'] = { anim: BattleMoveAnims['kingsshield'].anim };
-BattleMoveAnims['bombardment'] = { anim: BattleMoveAnims['syrupbomb'].anim };
-BattleMoveAnims['destinyboard'] = { prepareAnim: BattleOtherAnims.chargestatus.anim, anim: BattleMoveAnims['darkpulse'].anim }; // might change anim to something else.
-BattleMoveAnims['bubbleblast'] = { anim: BattleMoveAnims['bubblebeam'].anim };
-BattleMoveAnims['scrapfist'] = { anim: BattleOtherAnims.punchattack.anim };
-BattleMoveAnims['toxicbreath'] = { anim: BattleMoveAnims['smog'].anim };
-BattleMoveAnims['silentburn'] = { anim: BattleMoveAnims['blastburn'].anim };
-BattleMoveAnims['neutronblast'] = { anim: BattleMoveAnims['photongeyser'].anim };
-BattleMoveAnims['negate'] = { anim: BattleMoveAnims['block'].anim };
-BattleMoveAnims['shrink'] = { anim: BattleMoveAnims['minimize'].anim };
-BattleMoveAnims['mechanizedmelee'] = { anim: BattleOtherAnims.punchattack.anim };
-BattleMoveAnims['celestialsword'] = { anim: BattleOtherAnims.slashattack.anim };
-BattleMoveAnims['sparkblaster'] = { anim: BattleMoveAnims['zapcannon'].anim };
-BattleMoveAnims['parasiteparacide'] = { anim: BattleMoveAnims['bulletseed'].anim };
-BattleMoveAnims['swordsofrevealinglight'] = { anim: BattleMoveAnims['swordsdance'].anim };
-BattleMoveAnims['stridentblaze'] = { anim: BattleMoveAnims['thunderbolt'].anim }; // might change.
-BattleMoveAnims['metalmorph'] = { anim: BattleOtherAnims.selfstatus.anim };
-BattleMoveAnims['mirrorwall'] = { anim: BattleOtherAnims.selfstatus.anim };
-BattleMoveAnims['ringofdestruction'] = { anim: BattleMoveAnims['hyperbeam'].anim };
-BattleMoveAnims['chaosscepterblast'] = { anim: BattleMoveAnims['nightslash'].anim };
-BattleMoveAnims['silentslash'] = { anim: BattleOtherAnims.slashattack.anim };
-BattleMoveAnims['pointtopoint'] = { anim: BattleOtherAnims.selfstatus.anim };
-BattleMoveAnims['naptime'] = { anim: BattleMoveAnims['rest'].anim };
-BattleMoveAnims['ojamadeltahurricane'] = { anim: BattleMoveAnims['hurricane'].anim };
-BattleMoveAnims['transcendantwings'] = { anim: BattleOtherAnims.flight.anim };
-BattleMoveAnims['paralyzingpelletbarrage'] = { anim: BattleMoveAnims['bulletseed'].anim };
-BattleMoveAnims['clockprison'] = { anim: BattleMoveAnims['nastyplot'].anim };
-BattleMoveAnims['ultimatepound'] = { anim: BattleMoveAnims['pound'].anim };
-BattleMoveAnims['rainbowrefraction'] = { anim: BattleMoveAnims['dragonpulse'].anim };
-BattleMoveAnims['neosforce'] = { anim: BattleOtherAnims.attack.anim }; // Unsure what this should look like.
-BattleMoveAnims['megamorph'] = { anim: BattleOtherAnims.selfstatus.anim };
-BattleMoveAnims['forestterrain'] = {
-	anim: (scene, [attacker, defender]) => {
-		scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-forest.png')`, 1000, 0.3);
-		BattleOtherAnims.dance.anim(scene, [attacker]);
-	}
-};
-BattleMoveAnims['exchange'] = { anim: BattleOtherAnims.selfstatus.anim }; // Unsure what this move does.
-BattleMoveAnims['legendaryocean'] = { anim: BattleMoveAnims['surf'].anim };
-BattleMoveAnims['leviastream'] = { anim: BattleMoveAnims['originpulse'].anim };
-BattleMoveAnims['flameblast'] = { anim: BattleMoveAnims['fireblast'].anim };
-BattleMoveAnims['mountain'] = {
-	anim: (scene, [attacker, defender]) => {
-		scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-mountain.png)`, 1000, 0.3);
-		BattleOtherAnims.dance.anim(scene, [attacker]);
-	}
-};
-BattleMoveAnims['wasteland'] = {
-	anim: (scene, [attacker, defender]) => {
-		scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-desert.png')`, 1000, 0.3)
-		// Background will be replaced with something that makes sense once we get that background.
-		BattleOtherAnims.dance.anim(scene, [attacker]);
-	}
-};
-BattleMoveAnims['sparks'] = { anim: BattleMoveAnims['ember'].anim };
-BattleMoveAnims['cosmicflare'] = { anim: BattleMoveAnims['blueflare'].anim };
-BattleMoveAnims['thunderstroke'] = { anim: BattleMoveAnims['thunder'].anim };
-BattleMoveAnims['yami'] = {
-	anim: (scene, [attacker, defender]) => {
-		scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-npa.png')`, 1000, 0.3);
-		BattleOtherAnims.dance.anim(scene, [attacker]);
-	}
-};
-BattleMoveAnims['hornofchaos'] = { anim: BattleMoveAnims['megahorn'].anim };
-BattleMoveAnims['ectoplasmicfortification'] = { anim: BattleOtherAnims.selfstatus.anim };
-BattleMoveAnims['spellbindingcircle'] = { anim: BattleMoveAnims['darkvoid'].anim };
-BattleMoveAnims['venomvapor'] = { anim: BattleMoveAnims['sludgewave'].anim };
-BattleMoveAnims['heavystorm'] = { anim: BattleMoveAnims['defog'].anim };
-BattleMoveAnims['goatthrash'] = { anim: BattleMoveAnims['thrash'].anim };
-BattleMoveAnims['goatheal'] = { anim: BattleMoveAnims['milkdrink'].anim };
-BattleMoveAnims['meltedice'] = { anim: BattleMoveAnims['icebeam'].anim }; // Might change this one.
-BattleMoveAnims['fakehero'] = { anim: BattleOtherAnims.attack.anim };
-BattleMoveAnims['manabreak'] = { anim: BattleMoveAnims['psychic'].anim };
-BattleMoveAnims['graveoffire'] = { anim: BattleMoveAnims['fireblast'].anim, prepareAnim: BattleOtherAnims.chargestatus.anim };
-BattleMoveAnims['rockcrushsword'] = { anim: BattleOtherAnims.slashattack.anim };
-BattleMoveAnims['descroaking'] = { anim: BattleOtherAnims.selfstatus.anim };
-BattleMoveAnims['hungrybite'] = { anim: BattleMoveAnims['superfang'].anim };
-BattleMoveAnims['fiendishchain'] = { anim: BattleMoveAnims['bind'].anim };
-BattleMoveAnims['zombieworld'] = {
-	anim: (scene, [attacker, defender]) => {
-		scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-spl.png')`, 1000, 0.3);
-		// Will change this to something that fits this terrain better.
-		BattleOtherAnims.dance.anim(scene, [attacker]);
-	}
-};
-BattleMoveAnims['wrathofneos'] = { anim: BattleMoveAnims['judgement'].anim };
-BattleMoveAnims['bookofmoon'] = { anim: BattleMoveAnims['moonlight'].anim };
-BattleMoveAnims['diamondbladestrike'] = { anim: BattleOtherAnims.slashattack.anim };
-BattleMoveAnims['1000knives'] = { anim: BattleMoveAnims['powergem'].anim }; // Unsure what to do for this one.
-BattleMoveAnims['hammershot'] = { anim: BattleMoveAnims['gigahammer'].anim };
-BattleMoveAnims['claycharge'] = { anim: BattleMoveAnims['rockslide'].anim };
-BattleMoveAnims['ookazi'] = { anim: BattleMoveAnims['heatwave'].anim };
-BattleMoveAnims['ravagingfist'] = { anim: BattleOtherAnims.punchattack.anim };
-BattleMoveAnims['ceruleanskyfire'] = { anim: BattleMoveAnims['lightthatburnsthesky'].anim };
-BattleMoveAnims['hyperblaze'] = { anim: BattleMoveAnims['fireblast'].anim, prepareAnim: BattleOtherAnims.chargestatus.anim };
-BattleMoveAnims['frenzyfang'] = { anim: BattleMoveAnims['crunch'].anim };
-BattleMoveAnims['firehose'] = { anim: BattleMoveAnims['scald'].anim };
-BattleMoveAnims['therecanonlybeone'] = { anim: BattleMoveAnims['trickortreat'].anim }; // will change this later.
-BattleMoveAnims['clearstream'] = { anim: BattleMoveAnims['hurricane'].anim }; // might change this.
-BattleMoveAnims['harpieshuntingground'] = { 
-	anim: (scene, [attacker, defender]) => {
-		scene.backgroundEffect(`url('${Config.routes.client}/fx/bg-thunderplains.png')`, 1000, 0.3);
-		BattleOtherAnims.dance.anim(scene, [attacker]);
-	}
-};
-BattleMoveAnims['silverbowandarrow'] = { anim: BattleMoveAnims['spiritshackle'].anim }; // will be changed.
-BattleMoveAnims['rainofmercy'] = { anim: BattleOtherAnims.hydroshot.anim }; // will change this later.
-BattleMoveAnims['flipthetable'] = { anim: BattleMoveAnims['circlethrow'].anim };
-BattleMoveAnims['blazeaccelerator'] = { anim: BattleOtherAnims.selfstatus.anim };
-BattleMoveAnims['triblazeaccelerator'] = { anim: BattleOtherAnims.selfstatus.anim };
-BattleMoveAnims['lastwill'] = { anim: BattleMoveAnims['lastrespects'].anim };
-BattleMoveAnims['carderaser'] = { anim: BattleMoveAnims['block'].anim };
-BattleMoveAnims['deliquentduo'] = { anim: BattleOtherAnims.contactattack.anim }; // will change later.
-BattleMoveAnims['marshglasses'] = { anim: BattleMoveAnims['meanlook'].anim };
-BattleMoveAnims['froggyforcefield'] = { anim: BattleMoveAnims['reflect'].anim };
-BattleMoveAnims['majestyslash'] = { anim: BattleOtherAnims.slashattack.anim };
-BattleMoveAnims['ordertosmash'] = { anim: BattleMoveAnims['gigahammer'].anim };
-BattleMoveAnims['badsimochi'] = { anim: BattleOtherAnims.selfstatus.anim };
-BattleMoveAnims['cupoface'] = { anim: BattleMoveAnims['present'].anim };
-BattleMoveAnims['recklessgreed'] = { anim: BattleOtherAnims.selfstatus.anim };
-BattleMoveAnims['dragonicattack'] = { anim: BattleMoveAnims['dragonclaw'].anim };
-BattleMoveAnims['stimpack'] = { anim: BattleOtherAnims.selfstatus.anim };
-BattleMoveAnims['whiteelephantgift'] = { anim: BattleMoveAnims['present'].anim };
-BattleMoveAnims['beastfangs'] = { anim: BattleMoveAnims['crunch'].anim };
-BattleMoveAnims['yamiblow'] = { anim: BattleMoveAnims['darkpulse'].anim };
-BattleMoveAnims['ivyshackles'] = { anim: BattleMoveAnims['powerwhip'].anim };
-BattleMoveAnims['redeyesburn'] = { anim: BattleMoveAnims['fusionflare'].anim };
-BattleMoveAnims['callofthehaunted'] = { anim: BattleMoveAnims['curse'].anim };
-BattleMoveAnims['dshield'] = { anim: BattleOtherAnims.selfstatus.anim };
-BattleMoveAnims['twintwister'] = { anim: BattleMoveAnims['twister'].anim };
-BattleMoveAnims['devilsclaw'] = { anim: BattleOtherAnims.clawattack.anim };
-BattleMoveAnims['shockrocket'] = { anim: BattleMoveAnims['fireblast'].anim };
-BattleMoveAnims['doomgaze'] = { anim: BattleMoveAnims['darkvoid'].anim };
-BattleMoveAnims['darkrulernomore'] = { anim: BattleMoveAnims['darkpulse'].anim };
-BattleMoveAnims['darkhole'] = { anim: BattleMoveAnims['darkvoid'].anim };
-BattleMoveAnims['skyripwing'] = { anim: BattleMoveAnims['bravebird'].anim };
-BattleMoveAnims['minddrain'] = { anim: BattleMoveAnims['meanlook'].anim };
-BattleMoveAnims['skilldrain'] = { anim: BattleOtherAnims.attack.anim };
-BattleMoveAnims['dusttornado'] = { anim: BattleMoveAnims['hurricane'].anim };
-BattleMoveAnims['coldwave'] = { anim: BattleMoveAnims['icywind'].anim };
-BattleMoveAnims['dragoncapturejar'] = { anim: BattleMoveAnims['bind'].anim };
-BattleMoveAnims['burningland'] = { anim: BattleMoveAnims['scorchingsand'].anim };
-BattleMoveAnims['windstorm'] = { anim: BattleMoveAnims['hurricane'].anim };
-BattleMoveAnims['thewarriorreturingalive'] = { anim: BattleOtherAnims.selfstatus.anim };
-BattleMoveAnims['powerbond'] = { anim: BattleOtherAnims.attack.anim };
-BattleMoveAnims['emergencyprovisions'] = { anim: BattleOtherAnims.selfstatus.anim };
-BattleMoveAnims['fluteofdragon'] = { 
-	anim: (scene, [attacker, defender]) => {
-		scene.backgroundEffect('#574091', 900, 0.3);
-		BattleOtherAnims.sound.anim(scene, [attacker, defender]);
-	}
-};
-BattleMoveAnims['carddestroy'] = { anim: BattleOtherAnims.sound.anim };
-BattleMoveAnims['manarestoring'] = { anim: BattleOtherAnims.sound.anim };
-BattleMoveAnims['acidrain'] = { anim: BattleMoveAnims['smog'].anim };
-BattleMoveAnims['heytrunade'] = { anim: BattleMoveAnims['hurricane'].anim };
-BattleMoveAnims['solemnwish'] = { anim: BattleMoveAnims['wish'].anim };
-BattleMoveAnims['appointeroftheredlotus'] = { anim: BattleMoveAnims['mindreader'].anim};
-BattleMoveAnims['blackpendant'] = { anim: BattleOtherAnims.selfstatus.anim };
-// Castle Walls doesn't need any animations.
-BattleMoveAnims['mysticalspacetyphoon'] = { anim: (scene, [attacker, defender]) => {
-	scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-space.png')`, 1300, 0.5);
-	
-	// Hurricane
-	for (let i = 0; i < 4; i++) {
-		scene.showEffect('wisp', {
-			x: defender.x + 50,
-			y: defender.y - 35,
-			z: defender.z,
-			scale: 0.2,
-			opacity: 1,
-			time: 200 * i,
-		}, {
-			x: defender.x - 50,
-			y: defender.y,
-			z: defender.z,
-			scale: 0.4,
-			opacity: 0.4,
-			time: 200 * i + 200,
-		}, 'linear', 'fade');
-		scene.showEffect('wisp', {
-			x: defender.x - 50,
-			y: defender.y + 35,
-			z: defender.z,
-			scale: 0.2,
-			opacity: 1,
-			time: 200 * i,
-		}, {
-			x: defender.x + 50,
-			y: defender.y,
-			z: defender.z,
-			scale: 0.4,
-			opacity: 0.4,
-			time: 200 * i + 200,
-		}, 'linear', 'fade');
-		scene.showEffect('wisp', {
-			x: defender.x + 50,
-			y: defender.y,
-			z: defender.z,
-			scale: 0.2,
-			opacity: 1,
-			time: 200 * i,
-		}, {
-			x: defender.x - 50,
-			y: defender.y - 35,
-			z: defender.z,
-			scale: 0.4,
-			opacity: 0.4,
-			time: 200 * i + 200,
-		}, 'linear', 'fade');
-		scene.showEffect('wisp', {
-			x: defender.x - 50,
-			y: defender.y,
-			z: defender.z,
-			scale: 0.2,
-			opacity: 1,
-			time: 200 * i,
-		}, {
-			x: defender.x + 50,
-			y: defender.y - 35,
-			z: defender.z,
-			scale: 0.4,
-			opacity: 0.4,
-			time: 200 * i + 200,
-		}, 'linear', 'fade');
-	}
-}};
