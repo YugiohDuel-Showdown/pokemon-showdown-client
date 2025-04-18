@@ -1624,7 +1624,7 @@ export class BattleScene implements BattleSceneStub {
 		this.preloadImage(Dex.resourcePrefix + 'sprites/ani-back/substitute.gif');
 	}
 	rollBgm() {
-		this.setBgm(1 + this.numericId % 6);
+		this.setBgm(1 + this.numericId % );
 	}
 	setBgm(bgmNum: number) {
 		if (this.bgmNum === bgmNum) return;
