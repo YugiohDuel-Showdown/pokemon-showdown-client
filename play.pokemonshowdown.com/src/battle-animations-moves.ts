@@ -37191,7 +37191,7 @@ BattleMoveAnims['heytrunade'] = { anim: BattleMoveAnims['hurricane'].anim };
 BattleMoveAnims['solemnwish'] = { anim: BattleMoveAnims['wish'].anim };
 BattleMoveAnims['appointeroftheredlotus'] = { anim: BattleMoveAnims['mindreader'].anim};
 BattleMoveAnims['blackpendant'] = { anim: BattleOtherAnims.selfstatus.anim };
-// Castle Walls doesn't need any animations.
+BattleMoveAnims['castlewalls'] = { anim: BattleOtherAnims.selfstatus.anim };
 BattleMoveAnims['forestterrain'] = {
 	anim: (scene, [attacker, defender]) => {
 		scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-forest.png')`, 1000, 0.3);

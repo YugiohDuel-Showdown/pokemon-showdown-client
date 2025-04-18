@@ -696,6 +696,12 @@ export class Side {
 		case 'reflect':
 			this.sideConditions[condition] = [effect.name, 1, 5, this.battle.gen >= 4 ? 8 : 0];
 			break;
+		case 'froggyforcefiled':
+			this.sideConditions[condition] = [effect.name, 1, 5, 0];
+			break;
+		case 'castlewalls':
+			this.sideConditions[condition] = [effect.name, 1, 3, 0];
+			break;
 		case 'safeguard':
 			this.sideConditions[condition] = [effect.name, 1, persist ? 7 : 5, 0];
 			break;
