@@ -1209,6 +1209,7 @@ export class BattleTooltips {
 		if (ability === 'grasspelt' && (this.battle.hasPseudoWeather('Grassy Terrain') || this.battle.hasPseudoWeather('Forest Terrain'))) {
 			stats.def = Math.floor(stats.def * 1.5);
 		}
+		
 		if ((ability === 'swarm' || ability === 'overgrow') && this.battle.hasPseudoWeather('Forest Terrain')) {
 			stats.def = Math.floor(stats.def * 1.3);
 			stats.spd = Math.floor(stats.spd * 1.3);
