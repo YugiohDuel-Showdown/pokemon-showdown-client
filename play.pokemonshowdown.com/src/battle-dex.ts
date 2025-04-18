@@ -878,8 +878,8 @@ export const Dex = new class implements ModdedDex {
 		else if (gen <= 2 && species.gen <= 2) spriteData.spriteDir = 'sprites/gen2';
 		else if (gen <= 3 && species.gen <= 3) spriteData.spriteDir = 'sprites/gen3';
 		else if (gen <= 4 && species.gen <= 4) spriteData.spriteDir = 'sprites/gen4';
-		spriteData.x = 10;
-		spriteData.y = 5;
+		spriteData.x = 20;
+		spriteData.y = 30;
 		return spriteData;
 	}
 
