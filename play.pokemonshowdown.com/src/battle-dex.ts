@@ -878,8 +878,8 @@ export const Dex = new class implements ModdedDex {
 		else if (gen <= 2 && species.gen <= 2) spriteData.spriteDir = 'sprites/gen2';
 		else if (gen <= 3 && species.gen <= 3) spriteData.spriteDir = 'sprites/gen3';
 		else if (gen <= 4 && species.gen <= 4) spriteData.spriteDir = 'sprites/gen4';
-		spriteData.x = 0;
-		spriteData.y = 0;
+		spriteData.x = 10;
+		spriteData.y = 5;
 		return spriteData;
 	}
 
@@ -887,6 +887,8 @@ export const Dex = new class implements ModdedDex {
 		if (!pokemon) return '';
 		const data = this.getTeambuilderSpriteData(pokemon, gen);
 		const shiny = (data.shiny ? '-shiny' : '');
+		data.x = 0;
+		data.y = 0;
 		let url = `https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/front${shiny ? '-shiny' : ''}/${toID(pokemon.species)}.png`;
 		return `background-image:url(${url});background-position:${data.x}px ${data.y}px;background-repeat:no-repeat`;
 	}
