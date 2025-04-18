@@ -1206,7 +1206,7 @@ export class BattleTooltips {
 			stats.def = Math.floor(stats.def * 1.5);
 			stats.spd = Math.floor(stats.spd * 1.5);
 		}
-		if (ability === 'grasspelt' && this.battle.hasPseudoWeather('Grassy Terrain')) {
+		if (ability === 'grasspelt' && (this.battle.hasPseudoWeather('Grassy Terrain') || this.battle.hasPseudoWeather('Forest Terrain'))) {
 			stats.def = Math.floor(stats.def * 1.5);
 		}
 		if ((ability === 'swarm' || ability === 'overgrow') && this.battle.hasPseudoWeather('Forest Terrain')) {
@@ -2145,8 +2145,6 @@ export class BattleTooltips {
 		if (target) {
 			if (["MF", "FM"].includes(pokemon.gender + target.gender)) {
 				value.abilityModify(0.75, "Rivalry");
-			} else if (["MM", "FF"].includes(pokemon.gender + target.gender)) {
-				value.abilityModify(1.25, "Rivalry");
 			}
 		}
 		const noTypeOverride = [
