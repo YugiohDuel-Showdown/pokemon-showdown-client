@@ -15,7 +15,7 @@
 		initialize: function () {
 			// April Fool's 2016 - Digimon Showdown
 			// this.$el.html('<img class="logo" src="' + Dex.resourcePrefix + 'sprites/afd/digimonshowdown.png" alt="Digimon Showdown! (beta)" width="146" height="44" /><div class="maintabbarbottom"></div><div class="tabbar maintabbar"><div class="inner"></div></div><div class="userbar"></div>');
-			this.$el.html('<img class="logo" src="logo.png" alt="Yugioh Duel" width="146" height="44" style="mix-blend-mode: multiply;background-color: transparent;" /><div class="maintabbarbottom"></div><div class="tabbar maintabbar"><div class="inner"></div></div><div class="userbar"></div>');
+			this.$el.html('<img class="logo" src="logo.png" alt="Yugioh Duel" width="146" height="44" style="background-color: transparent;" /><div class="maintabbarbottom"></div><div class="tabbar maintabbar"><div class="inner"></div></div><div class="userbar"></div>');
 			this.$tabbar = this.$('.maintabbar .inner');
 			// this.$sidetabbar = this.$('.sidetabbar');
 			this.$userbar = this.$('.userbar');
