@@ -587,8 +587,8 @@ export const Dex = new class implements ModdedDex {
 		if (species.name.endsWith('-Gmax')) isDynamax = false;
 		let spriteData = {
 			gen: mechanicsGen,
-			w: 96,
-			h: 96,
+			w: 64,
+			h: 64,
 			y: 0,
 			url: Dex.resourcePrefix + 'sprites/',
 			pixelated: true,
