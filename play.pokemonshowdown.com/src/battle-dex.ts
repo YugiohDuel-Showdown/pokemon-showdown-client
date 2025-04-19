@@ -890,7 +890,7 @@ export const Dex = new class implements ModdedDex {
 		data.x = 12;
 		data.y = 22;
 		let url = `https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/front${shiny ? '-shiny' : ''}/${toID(pokemon.species)}.png`;
-		return `background-image:url(${url});background-position:${data.x}px ${data.y}px;background-repeat:no-repeat`;
+		return `background-image:url(${url});background-position:${data.x}px ${data.y}px;background-repeat:no-repeat;mix-blend-mode: multiply`;
 	}
 
 	getItemIcon(item: any) {
