@@ -609,7 +609,7 @@ export const Dex = new class implements ModdedDex {
 		}
 
 		if (isFront) spriteData.url = `https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/front${options.shiny ? '-shiny' : ''}/${species.id}.png`;
-		else if (!isFront && species.tags.includes("Has Back Sprite")) spriteData.url = `https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/back${options.shiny ? '-shiny' : ''}/${species.id}.png`;
+		else if (!isFront) spriteData.url = `https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/back${options.shiny ? '-shiny' : ''}/${species.id}.png`;
 		else spriteData.url = `https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/front${options.shiny ? '-shiny' : ''}/${species.id}.png`;
 		spriteData.pixelated = true;
 		spriteData.gen = 5;
