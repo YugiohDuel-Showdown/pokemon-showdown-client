@@ -864,6 +864,8 @@ export class BattleScene implements BattleSceneStub {
 				if (textBuf) textBuf += ' / ';
 				textBuf += pokemon.speciesForme;
 				let url = spriteData.url;
+				spriteData.w = 64;
+				spriteData.h = 64;
 				// if (this.paused) url.replace('/xyani', '/xy').replace('.gif', '.png');
 				buf += `<img src="${url}" width="${spriteData.w}" height="${spriteData.h}" style="position:absolute;top:${Math.floor(y - spriteData.h / 2)}px;left:${Math.floor(x - spriteData.w / 2)}px" />`;
 				buf2 += `<div style="position:absolute;top:${y + 45}px;left:${x - 40}px;width:80px;font-size:10px;text-align:center;color:#FFF;">`;
