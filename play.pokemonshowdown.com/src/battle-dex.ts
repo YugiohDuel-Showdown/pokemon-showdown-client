@@ -600,12 +600,12 @@ export const Dex = new class implements ModdedDex {
 		let dir;
 		let facing;
 		if (isFront) {
+			spriteData.w = 94;
+			spriteData.h = 94;
 			spriteData.isFrontSprite = true;
 			dir = '';
 			facing = 'front';
 		} else {
-			spriteData.w = 94;
-			spriteData.h = 94;
 			dir = '-back';
 			facing = 'back';
 		}
