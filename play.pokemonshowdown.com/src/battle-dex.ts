@@ -587,8 +587,8 @@ export const Dex = new class implements ModdedDex {
 		if (species.name.endsWith('-Gmax')) isDynamax = false;
 		let spriteData = {
 			gen: mechanicsGen,
-			w: 64,
-			h: 64,
+			w: 72,
+			h: 72,
 			y: 0,
 			url: Dex.resourcePrefix + 'sprites/',
 			pixelated: true,
@@ -600,8 +600,8 @@ export const Dex = new class implements ModdedDex {
 		let dir;
 		let facing;
 		if (isFront) {
-			spriteData.w = 94;
-			spriteData.h = 94;
+			spriteData.w = 102;
+			spriteData.h = 102;
 			spriteData.isFrontSprite = true;
 			dir = '';
 			facing = 'front';
