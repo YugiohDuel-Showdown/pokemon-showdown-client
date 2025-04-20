@@ -600,8 +600,8 @@ export const Dex = new class implements ModdedDex {
 		let dir;
 		let facing;
 		if (isFront) {
-			spriteData.w = 102;
-			spriteData.h = 102;
+			spriteData.w = 128;
+			spriteData.h = 128;
 			spriteData.isFrontSprite = true;
 			dir = '';
 			facing = 'front';
