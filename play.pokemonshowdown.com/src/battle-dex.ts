@@ -604,6 +604,8 @@ export const Dex = new class implements ModdedDex {
 			dir = '';
 			facing = 'front';
 		} else {
+			spriteData.w = 94;
+			spriteData.h = 94;
 			dir = '-back';
 			facing = 'back';
 		}
