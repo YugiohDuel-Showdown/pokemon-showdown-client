@@ -1186,6 +1186,26 @@ export class BattleScene implements BattleSceneStub {
 				time: instant ? 0 : 300,
 			});
 			break;
+		case 'reinforcement':
+			const reinforcement = new Sprite(BattleEffects.reinforcement, {
+				display: 'block',
+				x,
+				y,
+				z: side.behind(-14),
+				xscale: 1,
+				yscale: 0,
+				opacity: 0.1,
+			}, this);
+			this.$spritesFront[spriteIndex].append(reinforcement.$el);
+			this.sideConditions[siden][id] = [reinforcement];
+			reinforcement.anim({
+				opacity: 0.7,
+				time: instant ? 0 : 400,
+			}).anim({
+				opacity: 0.3,
+				time: instant ? 0 : 300,
+			});
+			break;
 		case 'reflect':
 			const reflect = new Sprite(BattleEffects.reflect, {
 				display: 'block',
@@ -1967,6 +1987,7 @@ export class PokemonSprite extends Sprite {
 		froggyforcefield: ['Froggy Forcefield', 'good'],
 		badsimochi: ['Bad Simochi', 'good'],
 		castlewalls: ["Castle Walls", 'good'],
+		reinforcement: ['Reinforcement', 'good'],
 		crushsword: ['Crush Sword', 'bad'],
 	};
 	forme = '';

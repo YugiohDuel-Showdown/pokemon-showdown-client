@@ -702,6 +702,9 @@ export class Side {
 		case 'castlewalls':
 			this.sideConditions[condition] = [effect.name, 1, 3, 0];
 			break;
+		case 'reinforcement':
+			this.sideConditions[condition] = [effect.name, 1, 3, 0];
+			break;
 		case 'safeguard':
 			this.sideConditions[condition] = [effect.name, 1, persist ? 7 : 5, 0];
 			break;

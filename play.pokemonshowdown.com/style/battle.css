@@ -574,6 +574,12 @@ License: GPLv2
 	display: none;
 	position: absolute;
 }
+.sidecondition-reinforcement {
+	background: #e46d0b;
+	border: 1px solid #964008;
+	display: none;
+	position: absolute;
+};
 .sidecondition-reflect {
 	background: #EEEEEE;
 	border: 1px solid #888888;
