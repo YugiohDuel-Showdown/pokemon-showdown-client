@@ -37313,4 +37313,5 @@ BattleMoveAnims['emeraldflame'] = { anim: BattleMoveAnims['flamethrower'].anim }
 BattleMoveAnims['skulldice'] = { anim: BattleMoveAnims['mindreader'].anim };
 BattleMoveAnims['michizure'] = { anim: BattleMoveAnims['retaliate'].anim };
 BattleMoveAnims['honestcry'] = { anim: BattleMoveAnims['boomburst'].anim };
+BattleMoveAnims['crushcardvirus'] = { anim: BattleMoveAnims['sludge'].anim };
 // End of Custom Animations
