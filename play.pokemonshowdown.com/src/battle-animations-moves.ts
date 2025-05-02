@@ -37317,4 +37317,5 @@ BattleMoveAnims['crushcardvirus'] = { anim: BattleMoveAnims['sludge'].anim };
 BattleMoveAnims['mysticpower'] = { anim: BattleMoveAnims['psychic'].anim };
 BattleMoveAnims['emergencyteleport'] = { anim: BattleMoveAnims['psychic'].anim };
 BattleMoveAnims['gravitybind'] = { anim: () => {}}; // This should not do anything since it could conflict with the gravity's animation.
+BattleMoveAnims['melodyofawakeningdragon'] = { anim: BattleMoveAnims['hypervoice'].anim };
 // End of Custom Animations
