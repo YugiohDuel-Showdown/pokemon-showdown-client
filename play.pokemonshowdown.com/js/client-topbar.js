@@ -832,6 +832,7 @@
 
 			buf += '<button name="setBg" value="blueeyes" class="option' + (cur === 'blueeyes' ? ' cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 0) + 'px"></span>Blue Eyes</button>';
 			buf += '<button name="setBg" value="ashblossom" class="option' + (cur === 'ashblossom' ? ' cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 0) + 'px"></span>Ash Blossom</button>';
+			buf += '<button name="setBg" value="nibiru" class="option' + (cur === 'nibiru' ? ' cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 0) + 'px"></span>Nibiru</button>';
 			
 			// buf += '<button name="setBg" value="charizards" class="option' + (cur === 'charizards' ? ' cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 0) + 'px"></span>Charizards</button>';
 			// buf += '<button name="setBg" value="horizon" class="option' + (cur === 'horizon' ? ' cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 1) + 'px"></span>Horizon</button>';
