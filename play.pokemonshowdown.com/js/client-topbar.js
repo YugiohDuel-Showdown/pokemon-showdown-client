@@ -830,7 +830,7 @@
 			buf += '<p><strong>Official</strong></p>';
 			buf += '<div class="bglist">';
 
-			buf += '<button name="setBg" value="blueyes" class="option' + (cur === 'blueeyes' ? ' cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 0) + 'px"></span>Blue Eyes</button>';
+			buf += '<button name="setBg" value="blueeyes" class="option' + (cur === 'blueeyes' ? ' cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 0) + 'px"></span>Blue Eyes</button>';
 			buf += '<button name="setBg" value="ashblossom" class="option' + (cur === 'ashblossom' ? ' cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 0) + 'px"></span>Ash Blossom</button>';
 			
 			// buf += '<button name="setBg" value="charizards" class="option' + (cur === 'charizards' ? ' cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 0) + 'px"></span>Charizards</button>';
