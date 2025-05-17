@@ -830,8 +830,9 @@
 			buf += '<p><strong>Official</strong></p>';
 			buf += '<div class="bglist">';
 
-			buf += '<button name="setBg" value="blueeyes" class="option' + (cur === 'blueeyes' ? 'cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 0) + 'px"></span>Blue Eyes</button>';
-			buf += '<button name="setBg" value="ash-blossom" class="option' + (cur === 'ash-blossom' ? 'cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 0) + 'px"></span>Ash Blossom</button>';
+			buf += '<button name="setBg" value="blueyes" class="option' + (cur === 'blueeyes' ? ' cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 0) + 'px"></span>Blue Eyes</button>';
+			buf += '<button name="setBg" value="ashblossom" class="option' + (cur === 'ashblossom' ? ' cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 0) + 'px"></span>Ash Blossom</button>';
+			
 			// buf += '<button name="setBg" value="charizards" class="option' + (cur === 'charizards' ? ' cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 0) + 'px"></span>Charizards</button>';
 			// buf += '<button name="setBg" value="horizon" class="option' + (cur === 'horizon' ? ' cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 1) + 'px"></span>Horizon</button>';
 			// buf += '<button name="setBg" value="waterfall" class="option' + (cur === 'waterfall' ? ' cur' : '') + '"><span class="bg" style="background-position:0 -' + (90 * 2) + 'px"></span>Waterfall</button>';
