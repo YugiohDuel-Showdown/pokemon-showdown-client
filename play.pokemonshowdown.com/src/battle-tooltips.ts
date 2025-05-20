@@ -1049,6 +1049,10 @@ export class BattleTooltips {
 				stats.atk = Math.floor(stats.atk * 0.5);
 			}
 
+			if (this.battle.gen < 2 && pokemon.status === 'blackflame') {
+				stats.spa = Math.floor(stats.spa * 0.5);
+			}
+
 			// Paralysis is calculated later in newer generations, so we need to apply it early here
 			if (this.battle.gen <= 2 && pokemon.status === 'par') {
 				stats.spe = Math.floor(stats.spe * 0.25);
@@ -2270,6 +2274,9 @@ export class BattleTooltips {
 		// Burn isn't really a base power modifier, so it needs to be applied after the Tera BP floor
 		if (this.battle.gen > 2 && serverPokemon.status === 'brn' && move.id !== 'facade' && move.category === 'Physical') {
 			if (!value.tryAbility("Guts")) value.modify(0.5, 'Burn');
+		}
+		if (this.battle.gen > 2 && serverPokemon.status === 'blackflame' && move.category === 'Special') {
+			value.modify(0.5, 'Black Flame');
 		}
 
 		if (

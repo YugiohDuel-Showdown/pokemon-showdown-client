@@ -1716,6 +1716,9 @@ export class Battle {
 				case 'brn':
 					this.scene.runStatusAnim('brn' as ID, [poke]);
 					break;
+				case 'blackflame':
+					this.scene.runStatusAnim('brn' as ID, [poke]);
+					break;
 				case 'psn':
 					this.scene.runStatusAnim('psn' as ID, [poke]);
 					break;
@@ -2045,6 +2048,9 @@ export class Battle {
 			case 'brn':
 				this.scene.resultAnim(poke, 'Already burned', 'neutral');
 				break;
+			case 'blackflame':
+				this.scene.resultAnim(poke, 'Already burned', 'neutral');
+				break;
 			case 'tox':
 			case 'psn':
 				this.scene.resultAnim(poke, 'Already poisoned', 'neutral');
@@ -2147,6 +2153,7 @@ export class Battle {
 			}
 
 			switch (args[2]) {
+			case 'blackflame':
 			case 'brn':
 				this.scene.resultAnim(poke, 'Burned', 'brn');
 				this.scene.runStatusAnim('brn' as ID, [poke]);
@@ -2200,6 +2207,7 @@ export class Battle {
 			if (poke) {
 				poke.status = '';
 				switch (args[2]) {
+				case 'blackflame':
 				case 'brn':
 					this.scene.resultAnim(poke, 'Burn cured', 'good');
 					break;
@@ -3255,7 +3263,7 @@ export class Battle {
 		// status parse
 		if (!status) {
 			output.status = '';
-		} else if (status === 'par' || status === 'brn' || status === 'slp' || status === 'frz' || status === 'tox') {
+		} else if (status === 'par' || status === 'brn' || status === 'blackflame' || status === 'slp' || status === 'frz' || status === 'tox') {
 			output.status = status;
 		} else if (status === 'psn' && output.status !== 'tox') {
 			output.status = status;

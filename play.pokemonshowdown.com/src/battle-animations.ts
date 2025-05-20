@@ -2898,6 +2898,8 @@ export class PokemonSprite extends Sprite {
 		let status = '';
 		if (pokemon.status === 'brn') {
 			status += '<span class="brn">BRN</span> ';
+		} else if (pokemon.status === 'blackflame') {
+			status += '<span class="brn">Black Flame</span>';
 		} else if (pokemon.status === 'psn') {
 			status += '<span class="psn">PSN</span> ';
 		} else if (pokemon.status === 'tox') {
@@ -2986,6 +2988,7 @@ export class PokemonSprite extends Sprite {
 //      -webkit-filter:  sepia(100%) hue-rotate(22deg) saturate(820%) brightness(29%);
 // psn: -webkit-filter:  sepia(100%) hue-rotate(618deg) saturate(285%);
 // brn: -webkit-filter:  sepia(100%) hue-rotate(311deg) saturate(469%);
+// black flame: : -webkit-filter:  sepia(100%) hue-rotate(311deg) saturate(469%);
 // slp: -webkit-filter:  grayscale(100%);
 // frz: -webkit-filter:  sepia(100%) hue-rotate(154deg) saturate(759%) brightness(23%);
 
@@ -5928,6 +5931,24 @@ export const BattleOtherAnims: AnimTable = {
 };
 export const BattleStatusAnims: AnimTable = {
 	brn: {
+		anim(scene, [attacker]) {
+			scene.showEffect('fireball', {
+				x: attacker.x - 20,
+				y: attacker.y - 15,
+				z: attacker.z,
+				scale: 0.2,
+				opacity: 0.3,
+			}, {
+				x: attacker.x + 40,
+				y: attacker.y + 15,
+				z: attacker.z,
+				scale: 1,
+				opacity: 1,
+				time: 300,
+			}, 'swing', 'fade');
+		},
+	},
+	blackflame: {
 		anim(scene, [attacker]) {
 			scene.showEffect('fireball', {
 				x: attacker.x - 20,

@@ -429,6 +429,8 @@ function pokeConvertInner($text) {
 			$out[] = '|-fail|'.resolvePokemon($line).'|psn';
 		} else if (endsRemove($line, ' is already burnt.')) {
 			$out[] = '|-fail|'.resolvePokemon($line).'|brn';
+		} else if (endsRemove($line, ' is already burnt.')) {
+			$out[] = '|-fail|'.resolvePokemon($line).'|blackflame';
 		} else if (endsRemove($line, ' is already paralyzed.')) {
 			$out[] = '|-fail|'.resolvePokemon($line).'|par';
 		} else if (endsRemove($line, ' calmed down!')) {
