@@ -37322,4 +37322,5 @@ BattleMoveAnims['seastealthattack'] = { anim: BattleMoveAnims['dive'].anim, prep
 BattleMoveAnims['emblemofdragondestroyer'] = { anim: BattleOtherAnims.sound.anim };
 BattleMoveAnims['galaxycrush'] = { anim: BattleMoveAnims['psychic'].anim };
 BattleMoveAnims['blackflame'] = { anim: BattleMoveAnims['willowisp'].anim };
+BattleMoveAnims['rapidstorm'] = { anim: BattleMoveAnims['aquajet'].anim };
 // End of Custom Animations
