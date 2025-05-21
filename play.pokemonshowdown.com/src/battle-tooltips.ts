@@ -1206,6 +1206,13 @@ export class BattleTooltips {
 				speedModifiers.push(1.5);
 			}
 		}
+		if (item === 'eviokite' && this.battle.dex.species.get(serverPokemon.speciesForme).nfe) {
+			stats.spe = Math.floor(stats.spe * 1.5);
+		}
+		if (item === 'eviomite' && this.battle.dex.species.get(serverPokemon.speciesForme).nfe) {
+			stats.atk = Math.floor(stats.atk * 1.5);
+			stats.spa = Math.floor(stats.spa * 1.5);
+		}
 		if (item === 'eviolite' && this.battle.dex.species.get(serverPokemon.speciesForme).nfe) {
 			stats.def = Math.floor(stats.def * 1.5);
 			stats.spd = Math.floor(stats.spd * 1.5);
@@ -2811,7 +2818,9 @@ class BattleStatGuesser {
 		moveCount['bulk'] = bulk;
 		moveCount['physicalBulk'] = physicalBulk;
 		moveCount['specialBulk'] = specialBulk;
-
+		if (itemid === 'eviokite') {
+			isFast = true;
+		}
 		if (
 			hasMove['agility'] || hasMove['dragondance'] || hasMove['quiverdance'] ||
 			hasMove['rockpolish'] || hasMove['shellsmash'] || hasMove['flamecharge']
