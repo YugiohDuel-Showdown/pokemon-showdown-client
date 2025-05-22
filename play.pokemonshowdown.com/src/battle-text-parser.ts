@@ -142,7 +142,7 @@ export class BattleTextParser {
 				return { args: ['-singlemove', pokemon, effect], kwArgs: { of: target } };
 			}
 			if ([
-				'bind', 'wrap', 'clamp', 'whirlpool', 'firespin', 'magmastorm', 'sandtomb', 'infestation', 'snaptrap', 'thundercage', 'trapped',
+				'bind', 'wrap', 'clamp', 'whirlpool', 'firespin', 'magmastorm', 'sandtomb', 'infestation', 'snaptrap', 'thundercage', 'trapped', 'gravitybind',
 			].includes(id)) {
 				return { args: ['-start', pokemon, effect], kwArgs: { of: target } };
 			}
@@ -975,7 +975,7 @@ export class BattleTextParser {
 				return line1 + template.replace('[POKEMON]', this.pokemon(pokemon)).replace('[ITEM]', this.effect(kwArgs.from))
 					.replace('[SOURCE]', this.pokemon(kwArgs.of));
 			}
-			if (kwArgs.partiallytrapped || id === 'bind' || id === 'wrap') {
+			if (kwArgs.partiallytrapped || id === 'bind' || id === 'wrap' || id === 'gravitybind') {
 				template = this.template('damageFromPartialTrapping');
 				return line1 + template.replace('[POKEMON]', this.pokemon(pokemon)).replace('[MOVE]', this.effect(kwArgs.from));
 			}

@@ -1735,6 +1735,7 @@ export class Battle {
 					this.scene.runOtherAnim('leech' as ID, [ofpoke!, poke]);
 					break;
 				case 'bind':
+				case 'gravitybind':
 				case 'wrap':
 					this.scene.runOtherAnim('bound' as ID, [poke]);
 					break;

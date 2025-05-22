@@ -1991,6 +1991,7 @@ export class PokemonSprite extends Sprite {
 		castlewalls: ["Castle Walls", 'good'],
 		reinforcement: ['Reinforcement', 'good'],
 		crushsword: ['Crush Sword', 'bad'],
+		gravitybind: ['Gravity Bind', 'bad'],
 	};
 	forme = '';
 	cryurl: string | undefined = undefined;
