@@ -962,10 +962,10 @@ p.or:after {
 	position: absolute;
 	left: -30px;
 	bottom: -5px;
-	background: url(https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/front/dmagician.png) center no-repeat;
+	background: url(https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/front/darkmagician.png) center no-repeat;
 }
 .roomcounters button:hover .usercount {
-	background: url(https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/front/dmagician.png) center no-repeat;
+	background: url(https://raw.githubusercontent.com/YugiohDuel-Showdown/Yugioh-Monster-Sprites/refs/heads/main/front/darkmagician.png) center no-repeat;
 }
 .roomcounters .battlecount {
 	display: block;
