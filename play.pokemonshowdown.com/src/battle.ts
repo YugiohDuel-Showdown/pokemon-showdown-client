@@ -3105,7 +3105,7 @@ export class Battle {
 			this.activateAbility(poke, fromeffect);
 			let minTimeLeft = 5;
 			let maxTimeLeft = 0;
-			const terrainList = ['mountain', 'wasteland', 'yami', 'zombieworld', 'harpieshuntingground'];
+			const terrainList = ['mountain', 'wasteland', 'yami', 'zombieworld', 'harpieshuntingground', 'venomswamp', 'forestterrain'];
 			if (effect.id.endsWith('terrain') || terrainList.includes(effect.id)) {
 				for (let i = this.pseudoWeather.length - 1; i >= 0; i--) {
 					let pwID = toID(this.pseudoWeather[i][0]);

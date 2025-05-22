@@ -37235,12 +37235,20 @@ BattleMoveAnims['harpieshuntingground'] = {
 	}
 };
 
+BattleMoveAnims['venomswamp'] = {
+	anim: (scene, [attacker, defender]) => {
+		scene.backgroundEffect(`url('${Config.routes.client}/fx/bg-npa.png')`, 1000, 0.3);
+		BattleOtherAnims.dance.anim(scene, [attacker]);
+	}
+};
+
 BattleMoveAnims['fluteofdragon'] = { 
 	anim: (scene, [attacker, defender]) => {
 		scene.backgroundEffect('#574091', 900, 0.3);
 		BattleOtherAnims.sound.anim(scene, [attacker, defender]);
 	}
 };
+
 
 BattleMoveAnims['mysticalspacetyphoon'] = { anim: (scene, [attacker, defender]) => {
 	scene.backgroundEffect(`url('https://${Config.routes.client}/fx/bg-space.jpg')`, 1000, 0.7);
@@ -37323,4 +37331,5 @@ BattleMoveAnims['emblemofdragondestroyer'] = { anim: BattleOtherAnims.sound.anim
 BattleMoveAnims['galaxycrush'] = { anim: BattleMoveAnims['psychic'].anim };
 BattleMoveAnims['blackflame'] = { anim: BattleMoveAnims['willowisp'].anim };
 BattleMoveAnims['rapidstorm'] = { anim: BattleMoveAnims['aquajet'].anim };
+BattleMoveAnims['darkness'] = { anim: BattleMoveAnims['poltergeist'].anim };
 // End of Custom Animations

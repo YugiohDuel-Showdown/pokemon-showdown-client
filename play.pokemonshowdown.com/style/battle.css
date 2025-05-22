@@ -474,6 +474,10 @@ License: GPLv2
 	background: hsl(257, 39%, 70%) url(../fx/bg-mountain.png) no-repeat scroll left top;
 	color: #574091;
 }
+.venomswampweather {
+	background: hsl(24, 18%, 70%) url(../fx/bg-npa.png) no-repeat scroll left top;
+	color: hsl(24, 18%, 41%);
+}
 .wastelandweather {
 	background: hsl(44, 27%, 70%) url(../fx/bg-desert.png) no-repeat scroll left top;
 	color: hsl(44, 27%, 41%);

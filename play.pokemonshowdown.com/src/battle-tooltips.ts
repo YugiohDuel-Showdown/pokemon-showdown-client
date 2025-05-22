@@ -681,6 +681,8 @@ export class BattleTooltips {
 					calls = 'Dark Pulse';
 				} else if (this.battle.hasPseudoWeather('Harpies Hunting Ground')) {
 					calls = 'Hurricane';
+				} else if (this.battle.hasPseudoWeather('Venom Swamp')) {
+					calls = 'Sludge Bomb';
 				} else {
 					calls = 'Tri Attack';
 				}
@@ -1621,6 +1623,8 @@ export class BattleTooltips {
 				moveType = 'Dark';
 			} else if (this.battle.hasPseudoWeather('Harpies Hunting Ground')) {
 				moveType = 'Flying';
+			} else if (this.battle.hasPseudoWeather('Venom Swamp')) {
+				moveType = 'Poison';
 			}
 		}
 		if (move.id === 'terablast' && pokemon.terastallized) {
@@ -1775,6 +1779,9 @@ export class BattleTooltips {
 		}
 		if (move.type === 'Electric' && this.battle.hasPseudoWeather('Mountain')) {
 			value.weatherModify(0, 'Mountain');
+		}
+		if (move.type === 'Poison' && this.battle.hasPseudoWeather('Venom Swamp')) {
+			value.weatherModify(0, 'Venom Swamp');
 		}
 		value.abilityModify(0, 'No Guard');
 		if (!value.value) return value;
@@ -2026,7 +2033,8 @@ export class BattleTooltips {
 				this.battle.hasPseudoWeather('Psychic Terrain') ||
 				this.battle.hasPseudoWeather('Mountain') ||
 				this.battle.hasPseudoWeather('Wasteland') ||
-				this.battle.hasPseudoWeather('Yami')
+				this.battle.hasPseudoWeather('Yami') ||
+				this.battle.hasPseudoWeather('Venom Swamp')
 			) {
 				value.modify(2, 'Terrain Pulse boost');
 			}
@@ -2296,7 +2304,8 @@ export class BattleTooltips {
 			!this.battle.hasPseudoWeather('Mountain') &&
 			!this.battle.hasPseudoWeather('Wasteland') &&
 			!this.battle.hasPseudoWeather('Yami') &&
-			!this.battle.hasPseudoWeather('Harpies Hunting Ground')
+			!this.battle.hasPseudoWeather('Harpies Hunting Ground') &&
+			!this.battle.hasPseudoWeather('Venom Swamp')
 		) {
 			value.set(0, 'no Terrain');
 		}
