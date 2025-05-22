@@ -37332,4 +37332,5 @@ BattleMoveAnims['galaxycrush'] = { anim: BattleMoveAnims['psychic'].anim };
 BattleMoveAnims['blackflame'] = { anim: BattleMoveAnims['willowisp'].anim };
 BattleMoveAnims['rapidstorm'] = { anim: BattleMoveAnims['aquajet'].anim };
 BattleMoveAnims['darkness'] = { anim: BattleMoveAnims['poltergeist'].anim };
+BattleMoveAnims['macrocosmos'] = { anim: BattleMoveAnims['healblock'].anim };
 // End of Custom Animations
