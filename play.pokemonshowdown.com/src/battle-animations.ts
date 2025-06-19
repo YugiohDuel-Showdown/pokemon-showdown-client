@@ -1983,6 +1983,7 @@ export class PokemonSprite extends Sprite {
 		reinforcement: ['Reinforcement', 'good'],
 		crushsword: ['Crush Sword', 'bad'],
 		gravitybind: ['Gravity Bind', 'bad'],
+		descroaking: ['Des Croaking', 'good'],
 	};
 	forme = '';
 	cryurl: string | undefined = undefined;
