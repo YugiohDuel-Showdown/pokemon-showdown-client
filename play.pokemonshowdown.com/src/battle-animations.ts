@@ -1646,7 +1646,7 @@ export class BattleScene implements BattleSceneStub {
 		this.preloadImage(Dex.resourcePrefix + 'sprites/ani-back/substitute.gif');
 	}
 	rollBgm() {
-		this.setBgm(1 + this.numericId %7);
+		this.setBgm(1 + this.numericId %4);
 	}
 	setBgm(bgmNum: number) {
 		if (this.bgmNum === bgmNum) return;
@@ -1660,15 +1660,6 @@ export class BattleScene implements BattleSceneStub {
 				this.bgm = BattleSound.loadBgm(`tdotr-3.mp3`, 987000, 1974000, this.bgm);
 				break;
 			case 3:
-				this.bgm = BattleSound.loadBgm(`dl-varis.mp3`, 297000, 1782000, this.bgm);
-				break;
-			case 4:
-				this.bgm = BattleSound.loadBgm(`dl-yugo.mp3`, 302000, 1812000, this.bgm);
-				break;
-			case 5:
-				this.bgm = BattleSound.loadBgm(`dl-leo.mp3`, 186000, 1860000, this.bgm);
-				break;
-			case 6:
 				this.bgm = BattleSound.loadBgm(`dl-climax.mp3`, 1806000, 1806000, this.bgm);
 			default:
 				this.bgm = BattleSound.loadBgm(`tdotr-1.mp3`, 1029000, 2058000, this.bgm);
