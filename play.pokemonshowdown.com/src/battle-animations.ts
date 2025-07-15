@@ -2076,7 +2076,7 @@ export class PokemonSprite extends Sprite {
 	animSub(instant?: boolean, noAnim?: boolean) {
 		if (!this.scene.animating) return;
 		if (this.$sub) return;
-		const subsp = Dex.getSpriteData('substitute', this.isFrontSprite, {
+		const subsp = Dex.getSpriteData('scapegoat', this.isFrontSprite, {
 			gen: this.scene.gen,
 			mod: this.scene.mod,
 		});
@@ -2344,7 +2344,7 @@ export class PokemonSprite extends Sprite {
 			this.$el.css('display', 'block');
 			this.animReset();
 			this.resetStatbar(pokemon);
-			if (pokemon.hasVolatile('substitute' as ID)) this.animSub(true);
+			if (pokemon.hasVolatile('scapegoat' as ID)) this.animSub(true);
 			return;
 		}
 		if (this.cryurl) {
