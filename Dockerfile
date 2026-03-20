@@ -36,15 +36,30 @@ RUN npm install && npm run build-full && \
 RUN cp --dereference play.pokemonshowdown.com/config/config.js /tmp/psc-config.js \
     && mv /tmp/psc-config.js play.pokemonshowdown.com/config/config.js
 
-# Stage 3: Serve with nginx
-FROM nginx:alpine
+# Stage 3: Serve with nginx + PHP-FPM
+FROM php:8.2-fpm-alpine
 
-# Copy built client files (including showdex/) to nginx web root
-COPY --from=builder /app/play.pokemonshowdown.com /usr/share/nginx/html
+# Install nginx
+RUN apk add --no-cache nginx
+
+# Copy built client files to web root
+COPY --from=builder /app/play.pokemonshowdown.com /var/www/html
+
+# Copy config directory (PHP files reference ../../config/config.inc.php)
+COPY --from=builder /app/config /var/www/config
+
+# Create PHP config files from examples (gitignored originals don't exist in build)
+RUN cp /var/www/config/config-example.inc.php /var/www/config/config.inc.php && \
+    cp /var/www/config/servers-example.inc.php /var/www/config/servers.inc.php
 
 # Copy nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+RUN rm -f /etc/nginx/http.d/default.conf
+COPY nginx.conf /etc/nginx/http.d/default.conf
+
+# Startup script
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["/start.sh"]
