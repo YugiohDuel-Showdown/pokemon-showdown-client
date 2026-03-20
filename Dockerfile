@@ -19,14 +19,18 @@ WORKDIR /app
 # Install git (required by build-indexes to clone pokemon-showdown and showdex)
 RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
 
-# Copy everything
+# Install dependencies first (cached unless package.json changes)
+COPY package.json package-lock.json ./
+RUN npm install
+
+# Copy source and build (cache busted only when source changes)
 COPY . .
 
 # Create caches directory (build-indexes uses it as cwd for git clone; it's gitignored so won't exist)
 RUN mkdir -p caches
 
-# Install dependencies and run full build
-RUN npm install && npm run build-full && \
+# Run full build
+RUN npm run build-full && \
     echo 'exports.BattlePokemonSprites = {};' > play.pokemonshowdown.com/data/pokedex-mini.js && \
     echo 'exports.BattlePokemonSpritesGens = {};' > play.pokemonshowdown.com/data/pokedex-mini-bw.js
 
