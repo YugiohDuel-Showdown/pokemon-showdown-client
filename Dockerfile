@@ -26,7 +26,9 @@ COPY . .
 RUN mkdir -p caches
 
 # Install dependencies and run full build
-RUN npm install && npm run build-full
+RUN npm install && npm run build-full && \
+    echo 'exports.BattlePokemonSprites = {};' > play.pokemonshowdown.com/data/pokedex-mini.js && \
+    echo 'exports.BattlePokemonSpritesGens = {};' > play.pokemonshowdown.com/data/pokedex-mini-bw.js
 
 # Resolve the config.js symlink into a real file so it survives the multi-stage copy.
 # play.pokemonshowdown.com/config/config.js is a symlink -> ../../config/config.js (gitignored),
