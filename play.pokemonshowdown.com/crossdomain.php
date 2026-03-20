@@ -8,7 +8,7 @@ if (preg_match('/^([a-z0-9-_\.]*?)\.psim\.us$/', $host, $m)) {
 	$config['host'] = $m[1];
 	if ($config['host'] === 'logs') die; // not authorised
 	if ($config['host'] === 'sim') die; // not authorised
-} else if ($host === $psconfig['routes']['client']) {
+} else if ($host === $psconfig['routes']['client'] || $host === 'play.yugiohduel.net') {
 	$config['host'] = 'showdown';
 } else {
 	die; // not authorised

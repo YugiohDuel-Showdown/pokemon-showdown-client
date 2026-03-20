@@ -1,7 +1,7 @@
 {
-    "root": "yugiohduel.net",
-    "client": "play.yugiohduel.net",
-    "dex": "dex.yugiohduel.net",
-    "replays": "replay.yugiohduel.net",
-    "users": "yugiohduel.net/users"
+    "root": "pokemonshowdown.com",
+    "client": "play.pokemonshowdown.com",
+    "dex": "dex.pokemonshowdown.com",
+    "replays": "replay.pokemonshowdown.com",
+    "users": "pokemonshowdown.com/users"
 }
