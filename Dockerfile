@@ -60,9 +60,9 @@ RUN cp /var/www/config/config-example.inc.php /var/www/config/config.inc.php && 
 RUN rm -f /etc/nginx/http.d/default.conf
 COPY nginx.conf /etc/nginx/http.d/default.conf
 
-# Startup script
+# Startup script (strip CRLF in case of Windows line endings)
 COPY start.sh /start.sh
-RUN chmod +x /start.sh
+RUN sed -i 's/\r//' /start.sh && chmod +x /start.sh
 
 EXPOSE 80
 
