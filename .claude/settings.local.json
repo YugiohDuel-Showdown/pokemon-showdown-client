@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find play.pokemonshowdown.com -name action.php -o -name *.php)",
+      "Bash(curl -s \"https://api.github.com/repos/Heroica-Emolga-s-Legendary-League/pokemon-showdown-client/contents/\")",
+      "Bash(python3 -c \"import json,sys; [print\\(f[''''name''''], f[''''type'''']\\) for f in json.load\\(sys.stdin\\)]\")",
+      "Bash(curl -s \"https://api.github.com/repos/Heroica-Emolga-s-Legendary-League/pokemon-showdown/contents/\")",
+      "Bash(curl -s \"https://api.github.com/repos/Heroica-Emolga-s-Legendary-League/pokemon-showdown-client/contents/config\")",
+      "Bash(curl -s \"https://api.github.com/repos/Heroica-Emolga-s-Legendary-League/pokemon-showdown/contents/config\")",
+      "Bash(curl:*)",
+      "Bash(python3 -c \"import json,sys; [print\\(b[''''name'''']\\) for b in json.load\\(sys.stdin\\)]\")",
+      "Bash(find /c/Users/korea/OneDrive/Documents/GitHub/pokemon-showdown -name start.sh -o -name *.sh)"
+    ]
+  }
+}

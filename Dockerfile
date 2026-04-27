@@ -43,18 +43,15 @@ RUN cp --dereference play.pokemonshowdown.com/config/config.js /tmp/psc-config.j
 # Stage 3: Serve with nginx + PHP-FPM
 FROM php:8.2-fpm-alpine
 
-# Install nginx
-RUN apk add --no-cache nginx
+# Install nginx and the tooling required to rebuild the client on container start
+RUN apk add --no-cache nginx nodejs npm git
 
-# Copy built client files to web root
-COPY --from=builder /app/play.pokemonshowdown.com /var/www/html
-
-# Copy config directory (PHP files reference ../../config/config.inc.php)
-COPY --from=builder /app/config /var/www/config
+# Copy the full built workspace so startup rebuilds can run inside the container
+COPY --from=builder /app /app
 
 # Create PHP config files from examples (gitignored originals don't exist in build)
-RUN cp /var/www/config/config-example.inc.php /var/www/config/config.inc.php && \
-    cp /var/www/config/servers-example.inc.php /var/www/config/servers.inc.php
+RUN cp /app/config/config-example.inc.php /app/config/config.inc.php && \
+    cp /app/config/servers-example.inc.php /app/config/servers.inc.php
 
 # Copy nginx config
 RUN rm -f /etc/nginx/http.d/default.conf
