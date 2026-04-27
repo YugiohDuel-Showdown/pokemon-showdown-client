@@ -2,7 +2,7 @@
 set -e
 
 cd /app
-npm run build-full
+npm run build-full || echo 'WARNING: build-full failed; serving pre-built assets from image'
 echo 'exports.BattlePokemonSprites = {};' > play.pokemonshowdown.com/data/pokedex-mini.js
 echo 'exports.BattlePokemonSpritesGens = {};' > play.pokemonshowdown.com/data/pokedex-mini-bw.js
 
